@@ -1,5 +1,6 @@
 ﻿---
 title: Integration Methods
+permalink: /integration.html
 ---
 
 {% include nav.html %}
