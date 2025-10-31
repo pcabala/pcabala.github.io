@@ -1,9 +1,17 @@
 ﻿<!-- _includes/nav.html -->
-<nav style="margin: 1rem 0;">
-  <a href="/">Home</a> ·
-  <a href="/systems/">Systems</a> ·
-  <a href="/gallery.html">Gallery</a> ·
-  <a href="/integration.html">Integration</a> ·
-  <a href="/addon.html">Add-on</a> ·
-  <a href="/about.html">About</a>
+<style>
+  nav.site-nav { margin: 1rem 0; }
+  nav.site-nav a { margin-right:.5rem; text-decoration:none; }
+  nav.site-nav a.active { font-weight:700; text-decoration:underline; }
+  nav.site-nav .sep { opacity:.6; margin-right:.5rem; }
+</style>
+
+{%- assign here = page.url | replace: 'index.html','' -%}
+<nav class="site-nav">
+  <a href="/" class="{% if here == '/' %}active{% endif %}">Home</a><span class="sep">·</span>
+  <a href="/systems/" class="{% if here == '/systems/' %}active{% endif %}">Systems</a><span class="sep">·</span>
+  <a href="/gallery.html" class="{% if here == '/gallery.html' %}active{% endif %}">Gallery</a><span class="sep">·</span>
+  <a href="/integration.md" class="{% if here == '/integration.html' or here == '/integration.md' %}active{% endif %}">Integration</a><span class="sep">·</span>
+  <a href="/addon.html" class="{% if here == '/addon.html' %}active{% endif %}">Add-on</a><span class="sep">·</span>
+  <a href="/about.html" class="{% if here == '/about.html' %}active{% endif %}">About</a>
 </nav>
