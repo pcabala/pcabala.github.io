@@ -2,20 +2,18 @@
 title: Strange Attractors
 ---
 
-<!-- Load MathJax so LaTeX renders -->
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% include nav.html %}
+{% include mathjax.html %}
 
 # Strange Attractors
 
-This site will collect images, animations, parameters, and integration methods.
+This site collects images, animations, parameters, and integration methods for well-known chaotic systems.
 
-Equation example (MathJax test):
+> Tip: use the **Systems** section for equations + parameters, **Gallery** for visuals, **Integration** for numerics, and **Add-on** for the Blender tool.
 
-$$
-\dot{x}=\sigma (y-x), \quad
-\dot{y}=x(\rho - z) - y, \quad
-\dot{z}=xy - \beta z.
-$$
-
-## Gallery
-(Your first images and videos will appear here later.)
+## Quick example (Lorenz)
+_includes\nav.html
+\dot{x}=\sigma (y-x),\quad
+\dot{y}=x(\rho - z)-y,\quad
+\dot{z}=xy-\beta z.
+_includes\nav.html
