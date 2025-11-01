@@ -1,5 +1,5 @@
 ﻿---
-title: Strange Attractors
+> 🛠️ This site is under construction – content is being added gradually.
 ---
 
 {% include nav.html %}
