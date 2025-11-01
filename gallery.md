@@ -1,8 +1,7 @@
 ﻿---
+layout: default
 title: Gallery
 ---
-
-{% include nav.html %}
 
 # Gallery
 

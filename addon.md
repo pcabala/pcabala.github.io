@@ -1,8 +1,7 @@
 ﻿---
+layout: default
 title: Blender Add-on
 ---
-
-{% include nav.html %}
 
 # Blender Add-on — Attractor Builder
 

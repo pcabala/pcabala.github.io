@@ -1,10 +1,8 @@
 ﻿---
+layout: default
 title: Integration Methods
-permalink: /integration.html
 ---
 
-{% include nav.html %}
-{% include mathjax.html %}
 
 # Integration Methods
 
