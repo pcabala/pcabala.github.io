@@ -1,17 +1,52 @@
-﻿<!-- _includes/nav.html -->
-<style>
-  nav.site-nav { margin: 1rem 0; }
-  nav.site-nav a { margin-right:.5rem; text-decoration:none; }
-  nav.site-nav a.active { font-weight:700; text-decoration:underline; }
-  nav.site-nav .sep { opacity:.6; margin-right:.5rem; }
-</style>
+﻿{% assign L = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[L] %}
+{% assign current = page.url | relative_url %}
+{% assign home_path = t.paths.home | relative_url %}
 
-{%- assign here = page.url | replace: 'index.html','' -%}
-<nav class="site-nav">
-  <a href="/" class="{% if here == '/' %}active{% endif %}">Home</a><span class="sep">·</span>
-  <a href="/systems/" class="{% if here == '/systems/' %}active{% endif %}">Systems</a><span class="sep">·</span>
-  <a href="/gallery.html" class="{% if here == '/gallery.html' %}active{% endif %}">Gallery</a><span class="sep">·</span>
-  <a href="/integration.html" class="{% if here == '/integration.html' %}active{% endif %}">Integration</a><span class="sep">·</span>
-  <a href="/addon.html" class="{% if here == '/addon.html' %}active{% endif %}">Add-on</a><span class="sep">·</span>
-  <a href="/about.html" class="{% if here == '/about.html' %}active{% endif %}">About</a>
+<nav>
+  <a href="{{ t.paths.home | relative_url }}"
+     class="{% if current == home_path %}active{% endif %}">
+     {{ t.nav.home }}
+  </a> |
+
+  <a href="{{ t.paths.systems | relative_url }}"
+     class="{% if current contains '/systems/' or current contains '/systemy/' %}active{% endif %}">
+     {{ t.nav.systems }}
+  </a> |
+
+  <a href="{{ t.paths.gallery | relative_url }}"
+     class="{% if current contains '/gallery/' or current contains '/galeria/' %}active{% endif %}">
+     {{ t.nav.gallery }}
+  </a> |
+
+  <a href="{{ t.paths.integration | relative_url }}"
+     class="{% if current contains '/integration/' or current contains '/integracja/' %}active{% endif %}">
+     {{ t.nav.integration }}
+  </a> |
+
+  <a href="{{ t.paths.addon | relative_url }}"
+     class="{% if current contains '/addon/' %}active{% endif %}">
+     {{ t.nav.addon }}
+  </a> |
+
+  <a href="{{ t.paths.about | relative_url }}"
+     class="{% if current contains '/about/' %}active{% endif %}">
+     {{ t.nav.about }}
+  </a>
+
+  <span style="margin-left:auto; float:right;">
+    {% if page.lang == 'en' %}
+      <span style="font-weight:bold;">EN</span> |
+      {% assign pl_fallback = site.data.i18n.pl.paths.home | relative_url %}
+      <a href="{{ page.alt_url | default: pl_fallback }}">PL</a>
+    {% else %}
+      {% assign en_fallback = site.data.i18n.en.paths.home | relative_url %}
+      <a href="{{ page.alt_url | default: en_fallback }}">EN</a> |
+      <span style="font-weight:bold;">PL</span>
+    {% endif %}
+  </span>
 </nav>
+
+
+
+

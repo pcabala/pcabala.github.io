@@ -1,0 +1,31 @@
+en:
+  nav:
+    home: Home
+    systems: Systems
+    gallery: Gallery
+    integration: Integration
+    addon: Add-on
+    about: About
+  paths:
+    home: /en/
+    systems: /en/systems/lorenz/
+    gallery: /en/gallery/
+    integration: /en/integration/
+    addon: /en/addon/
+    about: /en/about/
+
+pl:
+  nav:
+    home: Start
+    systems: Systemy
+    gallery: Galeria
+    integration: Integracja
+    addon: Add-on
+    about: O projekcie
+  paths:
+    home: /pl/
+    systems: /pl/systemy/lorenz/
+    gallery: /pl/galeria/
+    integration: /pl/integracja/
+    addon: /pl/addon/
+    about: /pl/o-projekcie/

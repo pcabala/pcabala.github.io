@@ -1,0 +1,19 @@
+current directory: D:/Sites/pcabala.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+C:/Ruby34-x64/bin/ruby.exe extconf.rb
+creating Makefile
+
+current directory: D:/Sites/pcabala.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251101-33852-iil09w sitelibdir\=./.gem.20251101-33852-iil09w clean
+
+current directory: D:/Sites/pcabala.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251101-33852-iil09w sitelibdir\=./.gem.20251101-33852-iil09w
+generating cparse-x64-mingw-ucrt.def
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: D:/Sites/pcabala.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251101-33852-iil09w sitelibdir\=./.gem.20251101-33852-iil09w install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20251101-33852-iil09w/racc
+
+current directory: D:/Sites/pcabala.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251101-33852-iil09w sitelibdir\=./.gem.20251101-33852-iil09w clean

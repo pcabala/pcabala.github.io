@@ -1,0 +1,291 @@
+/* ==============================
+   Custom styles for Strange Attractors site
+   ============================== */
+
+/* --- Global text and layout --- */
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+  line-height: 1.7;
+  color: #222;
+  background-color: #fafafa;
+  margin: 2em auto;
+  max-width: 900px;
+  padding: 0 1.2em;
+}
+
+/* --- Headings --- */
+h1, h2, h3 {
+  font-family: "Palatino Linotype", "Book Antiqua", serif;
+  color: #1a1a1a;
+}
+
+h1 {
+  font-size: 1.9em;
+  margin-top: 1.4em;
+  margin-bottom: 0.8em;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+  border-top: 1px solid #ddd;
+  padding-top: 0.6em;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-top: 1.6em;
+  margin-bottom: 0.5em;
+}
+
+/* --- Paragraphs --- */
+p {
+  margin-top: 0.3em;
+  margin-bottom: 0.9em;
+  text-align: justify;
+}
+
+/* Indent the second and later paragraphs slightly */
+p + p {
+  text-indent: 1.2em;
+}
+
+/* --- Blockquotes and highlights --- */
+blockquote {
+  font-style: italic;
+  color: #555;
+  border-left: 3px solid #ccc;
+  padding-left: 1em;
+  margin: 1.5em 0;
+}
+
+/* --- Links --- */
+a {
+  color: #0044cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* --- Top navigation (main menu) --- */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 0.8rem;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.4em;
+}
+
+/* Default menu links */
+nav a {
+  font-weight: 500;
+  color: #333;
+}
+nav a:hover {
+  color: #0056b3;
+}
+
+/* --- Language switch (EN | PL) --- */
+nav .nav-lang {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+nav .nav-lang .active {
+  font-weight: 700;
+  color: #111;
+}
+
+nav .nav-lang .sep {
+  color: #94a3b8;
+}
+
+
+/* --- Generic section spacing --- */
+section {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/* --- Tables --- */
+table {
+  border-collapse: collapse;
+  margin: 0.6em 0;
+  width: auto;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.35em 0.6em;
+}
+thead th {
+  background: #f5f5f5;
+  font-weight: 600;
+}
+
+/* --- Systems sub-navigation (attractor list) --- */
+.systems-subnav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.1rem 0.01rem;        /* tiny spacing between links */
+  padding: 0.4rem 0;
+  margin-bottom: 0.8rem;
+  position: sticky;
+  top: 0;
+  background: #fafafa;
+  z-index: 10;
+  border-bottom: 1px solid #d1d5db;
+}
+
+/* Attractor links – compact, blue, separated by thin lines */
+.systems-subnav a {
+  color: #0b63c7;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.05rem 0.3rem;
+  /* border-right: 1px solid #94a3b8;  -- optional separator */
+  margin-right: 0.2rem;
+  line-height: 1.4;
+  white-space: nowrap;
+  transition: color 0.15s;
+}
+
+/* Last link: remove separator and right margin */
+.systems-subnav a:last-child {
+  border-right: none;
+  margin-right: 0;
+}
+
+/* Hover state – subtle color darkening */
+.systems-subnav a:hover {
+  color: #063d82;
+}
+
+/* Active link – bold only, no color or background change */
+.systems-subnav a.active {
+  font-weight: 700;
+}
+/* --- Attractor page layout --- */
+/* Centered, bold H1 kept in the same font family */
+.attractor-title {
+  text-align: center;
+  font-weight: 700;
+  margin: 0.8rem 0 1.2rem;
+}
+
+/* Responsive square media block (1:1) */
+.attractor-hero {
+  margin: 0.8rem auto 1.2rem;
+  max-width: 560px;             /* keeps it compact; adjust if needed */
+}
+
+.attractor-hero .media-frame {
+  width: 100%;
+  aspect-ratio: 1 / 1;          /* modern browsers */
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.attractor-hero video,
+.attractor-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Small details for section spacing */
+.attractor-section {
+  margin: 1.2rem 0;
+}
+
+.attractor-meta {
+  font-size: 0.95rem;
+  color: #444;
+}
+/* Monospace block for raw add-on equations/settings */
+pre.eq-plain {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 0.5rem 0.6rem;
+  margin: 0.6rem 0;
+  overflow: auto;
+}
+
+/* --- Attractor video: left-aligned, no frame, seamless with page background --- */
+.attractor-hero{
+  max-width: 560px;           /* kompaktowa szerokość; zmień/usuń jeśli chcesz większe */
+  margin: 0.8rem 0 1.2rem;    /* lewo zamiast center (bez auto) */
+}
+
+.attractor-hero .media-frame{
+  width: 100%;
+  aspect-ratio: 1 / 1;        /* nowoczesne przeglądarki */
+  min-height: 320px;          /* Fallback gdyby aspect-ratio nie zadziałało */
+  background: transparent;    /* zlewa się z body (#fafafa) */
+  border: none;               /* bez ramki */
+  border-radius: 0;           /* bez zaokrągleń, czysto */
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.attractor-hero video{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* wypełnia kwadrat; użyj 'contain' jeśli wolisz bez cropa */
+  background: transparent;
+}
+/* --- Attractor page header --- */
+h1.attractor-title {
+  font-size: 1.2rem;        /* zmień np. 2.2 dla większego */
+  font-weight: 600;         /* półbold, możesz dać 700 dla pełnego bolda */
+  margin: 0.6rem 0 0.8rem;  /* górny, dolny odstęp */
+  text-align: left;         /* wyrównanie do lewej */
+  color: #111;              /* przyjazny kontrast */
+  padding-left: 0.2rem;     /* delikatne wyrównanie z filmem */
+}
+/* --- Navbar separator styling --- */
+nav {
+  border-bottom: 1px solid #dcdcdc;  /* cienka, subtelna linia */
+  margin-bottom: 0;                 /* usuwa przerwę między linią a treścią */
+  padding-bottom: 0.3rem;           /* lekki oddech wewnątrz menu */
+}
+
+main.page-content {
+  margin-top: 0.5rem;               /* minimalny odstęp, żeby tekst nie „przyklejał się” do linii */
+}
+
+
+/* Left-aligned single-line equations */
+.mathline {
+  margin: 0.5rem 0 0.5rem 1rem;  /* góra, prawo, dół, lewo */
+  line-height: 1.35;
+  padding-left: 0;
+  text-indent: 0;
+}
+
+/* Active item in top nav: bold + subtle underline */
+nav a.active {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

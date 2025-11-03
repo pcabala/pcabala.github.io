@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>pcabala.github.io</title>
+    
+    <script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+    <link rel="stylesheet" href="/assets/css/custom.css">
+  </head>
+  <body>
+    
+
+
+
+
+<nav>
+  <a href="/en/"
+     class="">
+     Home
+  </a> |
+
+  <a href="/en/systems/lorenz/"
+     class="active">
+     Systems
+  </a> |
+
+  <a href="/en/gallery/"
+     class="">
+     Gallery
+  </a> |
+
+  <a href="/en/integration/"
+     class="">
+     Integration
+  </a> |
+
+  <a href="/en/addon/"
+     class="">
+     Add-on
+  </a> |
+
+  <a href="/en/about/"
+     class="">
+     About
+  </a>
+
+  <span style="margin-left:auto; float:right;">
+    
+      <span style="font-weight:bold;">EN</span> |
+      
+      <a href="/pl/">PL</a>
+    
+  </span>
+</nav>
+
+
+
+
+
+    
+
+    <main class="page-content" aria-label="Content">
+      <nav class="systems-subnav">
+  <a href="/en/systems/arneodo/" class="active">Arneodo</a>
+  <a href="/en/systems/burke-shaw/">Burke–Shaw</a>
+  <a href="/en/systems/chen/">Chen</a>
+  <a href="/en/systems/dadras/">Dadras</a>
+  <a href="/en/systems/dequan-li/">Dequan–Li</a>
+  <a href="/en/systems/hadley/">Hadley</a>
+  <a href="/en/systems/halvorsen/">Halvorsen</a>
+  <a href="/en/systems/langford/">Langford</a>
+  <a href="/en/systems/lorenz/">Lorenz</a>
+  <a href="/en/systems/lotka-volterra/">Lotka–Volterra</a>
+  <a href="/en/systems/lu/">Lü</a>
+  <a href="/en/systems/newton-leipnik/">Newton–Leipnik</a>
+  <a href="/en/systems/nose-hoover/">Nosé–Hoover</a>
+  <a href="/en/systems/rabinovich-fabrikant/">Rabinovich–Fabrikant</a>
+  <a href="/en/systems/rikitake/">Rikitake</a>
+  <a href="/en/systems/rossler/">Rössler</a>
+  <a href="/en/systems/shimizu-morioka/">Shimizu–Morioka</a>
+  <a href="/en/systems/sprott-b/">Sprott B</a>
+  <a href="/en/systems/sprott-d/">Sprott D</a>
+  <a href="/en/systems/sprott-e/">Sprott E</a>
+  <a href="/en/systems/sprott-linz-f/">Sprott–Linz F</a>
+  <a href="/en/systems/sprott-linz-k/">Sprott–Linz K</a>
+  <a href="/en/systems/sprott-n/">Sprott N</a>
+  <a href="/en/systems/sprott-r/">Sprott R</a>
+  <a href="/en/systems/thomas/">Thomas</a>
+</nav>
+
+<h1 class="attractor-title">Arneodo Attractor</h1>
+
+<div class="attractor-hero">
+  <div class="media-frame">
+    <video autoplay="true" loop="true" muted="" playsinline="" preload="metadata">
+      <source src="/assets/media/attractors/arneodo.mp4?v=1" type="video/mp4" />
+    </video>
+  </div>
+</div>
+
+<pre class="eq-plain">
+<b>Equations used in the Attractor Builder (Blender add-on):</b>
+dx/dt = y
+dy/dt = z
+dz/dt = -a*x - b*y + c*x**3
+<b>Parameters</b>:
+|a = -5,5 | b = 3,5 | c = -1 |
+<b>Simulation settings:</b>
+Initial state: x₀ = 0.1, y₀ = 0.0, z₀ = 0.0
+Min Step: 0.000001
+Max Step: 0.01
+Steps: 15000
+Burn-in: 1000
+Scale: 0.2
+</pre>
+
+<h4 id="model-details">Model details:</h4>
+<!-- a) Context / Kontekst -->
+<p><i>&lt;TODO: brief historical context &amp; application (2–3 sentences). Mention original author &amp; year.&gt;</i></p>
+
+<!-- b) (Optional) inline display of original equations can be added below if needed -->
+<!--
+<p class="mathline">\(\dot{x} = \dots\)</p>
+<p class="mathline">\(\dot{y} = \dots\)</p>
+<p class="mathline">\(\dot{z} = \dots\)</p>
+-->
+
+<!-- c) Parameters & interpretation / Parametry i interpretacja -->
+<p><i>&lt;TODO: key parameters and qualitative behavior: periodic → quasi-periodic → chaos, sensitivity, geometry&gt;</i></p>
+
+<!-- d) Source / Źródło -->
+<p>Arneodo, A., Coullet, P., &amp; Tresser, C. (1981).<i> A possible new mechanism for the onset of turbulence.</i> Physics Letters A, 81(4), 197–201.
+ https://doi.org/10.1016/0375-9601(81)90239-5&gt;</p>
+
+    </main>
+  </body>
+</html>
