@@ -1,37 +1,19 @@
 ﻿---
-layout: default
+layout: systems
+title: "Langford Attractor"
+video: "/assets/media/attractors/langford.webm"
+video_mp4: "/assets/media/attractors/langford.mp4"
+alpha: true   # włącza transparentny styl + object-fit: contain tylko na tej stronie
+stop_at: 11   # w sekundach; usuń ten wiersz, jeśli chcesz zwykłą pętlę (loop)
 lang: en
-permalink: /en/systems/langford/
-alt_url:  /pl/systemy/langford/
-title: Langford Attractor
 ---
 
 
-{% include systems_subnav_en.html %}
-
-
-<h1 class="attractor-title">Langford Attractor</h1>
-
-<div class="attractor-hero">
-  <div class="media-frame">
-    <video 
-      autoplay 
-      loop 
-      muted 
-      playsinline 
-      preload="metadata"
-      width="100%"
-      style="background: transparent;"
-    >
-      <source src="{{ '/assets/media/attractors/langford.webm' | relative_url }}?v=1" type="video/webm">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</div>
 
 
 <pre class="eq-plain">
-<b>Equations used in the Attractor Builder (Blender add-on):</b>
+Attractor Builder (Blender add-on)
+<b>Equations:</b>
 dx/dt = (z - b) * x - d * y
 dy/dt = d * x + (z - b) * y
 dz/dt = c + a * z - (z**3)/3 - (x**2 + y**2) * (1 + e * z)
@@ -47,17 +29,19 @@ Scale: 0.1
 </pre>
 
 
-#### Model details:
 <!-- a) Context and historical background -->
 <p>
-The <b>Langford attractor</b> is a mathematical model of a chaotic system introduced by 
-Canadian mathematician <b>William F. Langford</b> in 1984 during his studies of the 
-interaction between <i>Hopf</i> and <i>hysteresis</i> bifurcations. 
-It represents one of the earliest examples of how a system with smooth nonlinearities 
-can give rise to <i>torus breakdown</i> and chaotic oscillations. 
-Although this system is often misidentified as the <b>Aizawa attractor</b>, 
-Langford’s publication predates Aizawa’s related work and provides the first formal definition of these equations. 
-The original system proposed by Langford (1984) was as follows:
+The <b>Langford attractor</b> is a mathematical model of a chaotic system introduced by
+Canadian mathematician William F. Langford in 1984 during his numerical studies
+of the interaction between <i>Hopf</i> and <i>hysteresis</i> bifurcations.
+It was one of the first smooth three-dimensional systems to demonstrate
+how the coupling of these bifurcations can lead to <i>torus breakdown</i>
+and the onset of chaos.  
+Although it is sometimes confused with the Aizawa attractor,
+Langford’s work provided the first formal formulation of this
+type of torus-breakdown dynamics, while Aizawa 
+introduced a related simplified version of the system.
+The original system proposed by Langford (1984, p. 287) is given by equations:
 </p>
 
 <!-- b) System of equations -->
@@ -65,24 +49,34 @@ The original system proposed by Langford (1984) was as follows:
 <p class="mathline">\(\dot{y} = \omega x + (z - \beta)y\)</p>
 <p class="mathline">\(\dot{z} = \mu + \alpha z - \tfrac{1}{3}z^{3} - (x^{2} + y^{2})(\ell + p z) + \varepsilon z x^{3}\)</p>
 
+
 <!-- c) Parameters and interpretation -->
 <p>
-In this formulation, the parameters <i>μ</i>, <i>α</i>, and <i>β</i> define the basic dynamical balance 
-and control the local stability of fixed points, 
-while <i>ℓ</i> and <i>p</i> shape the toroidal structure of the flow. 
-The parameter <i>ω</i> determines the rotational frequency, 
-and <i>ε</i> introduces <i>non-axisymmetric</i> effects that gradually transform the torus 
-into a chaotic attractor. 
-Increasing <i>ε</i> causes the system to transition from quasi-periodic motion 
-to fully developed chaos, a process now known as <b>torus breakdown</b>. 
+In this formulation, the parameters <i>μ</i>, <i>α</i>, and <i>β</i> govern the
+local growth rates and stability of the stationary states.
+he pair <i>ℓ</i> and <i>p</i> determine the onset and geometry of the
+Naimark–Sacker (secondary Hopf or torus) bifurcation,
+while the frequency <i>ω</i> controls the rotational motion
+in the <i>x–y</i> plane.
+The parameter <i>ε</i> introduces <i>non-axisymmetric</i> perturbations
+that destroy the smooth invariant torus and initiate
+a cascade of bifurcations — phase locking, period doubling, and
+eventually chaotic dynamics.
+As <i>ε</i> increases, the attractor evolves from a smooth torus to a
+fractal "thick torus" and finally to transient chaos.
 </p>
 
 <!-- d) Source -->
 <p>
-Langford, W. F. (1984). <i>Numerical studies of torus bifurcations</i>. 
-Physica D: Nonlinear Phenomena, 10(1–2), 135–156. 
-<a href="https://doi.org/10.1016/0167-2789(84)90115-1" target="_blank">
-https://doi.org/10.1016/0167-2789(84)90115-1
+<b>Source:</b> Langford, W. F. (1984).
+<i>Numerical Studies of Torus Bifurcations.</i>
+In: <i>International Series of Numerical Mathematics</i>, Vol. 70,
+Birkhäuser Verlag, Basel, pp. 285–295.
+<br>
+DOI:
+<a href="https://doi.org/10.1007/978-3-0348-6256-1_19" target="_blank">
+10.1007/978-3-0348-6256-1_19
 </a>
 </p>
+
 

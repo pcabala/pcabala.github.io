@@ -1,54 +1,43 @@
 ﻿---
-layout: default
+layout: systems
+title: "Atraktor Langforda"
+video: "/assets/media/attractors/langford.webm"
+video_mp4: "/assets/media/attractors/langford.mp4"
+alpha: true   # włącza transparentny styl + object-fit: contain tylko na tej stronie
+stop_at: 11   # w sekundach; usuń ten wiersz, jeśli chcesz zwykłą pętlę (loop)
 lang: pl
-permalink: /pl/systemy/langford/
-alt_url:  /en/systems/langford/
-title: Atraktor Langforda
 ---
 
-{% include systems_subnav_pl.html %}
-
-
-<h1 class="attractor-title">Atraktor Langforda</h1>
-
-<div class="attractor-hero">
-  <div class="media-frame">
-    <video autoplay="true" loop="true" muted playsinline preload="metadata">
-      <source src="/assets/media/attractors/langford.mp4?v=1" type="video/mp4">
-    </video>
-  </div>
-</div>
-
-
-
 <pre class="eq-plain">
-<b>Równania użyte w dodatku Attractor Builder (Blender):</b>
+Attractor Builder (Blender add-on)
+<b>Równania:</b>
 dx/dt = (z - b) * x - d * y
 dy/dt = d * x + (z - b) * y
 dz/dt = c + a * z - (z**3)/3 - (x**2 + y**2) * (1 + e * z)
-<b>Parametry</b>:
+<b>Parametry:</b>
 | a = 0.95 | b = 0.7 | c = 0.6 | d = 3.5 | e = 0.25 |
 <b>Ustawienia symulacji:</b>
 Stan początkowy: x₀ = 0.1, y₀ = 0.0, z₀ = 0.0
 Metoda: RK4
-Krok czasowy (dt): 0.015
+Krok czasu (dt): 0.015
 Liczba kroków: 15000
-Okres rozgrzewki (burn-in): 300
+Faza rozgrzewki (burn-in): 300
 Skala: 0.1
 </pre>
 
-#### Szczegóły modelu:
-
 <!-- a) Kontekst i tło historyczne -->
 <p>
-<b>Atraktor Langforda</b> to model układu dynamicznego o chaotycznym zachowaniu, 
-opracowany przez kanadyjskiego matematyka <b>Willama F. Langforda</b> w 1984 roku 
-w ramach badań nad interakcją między bifurkacjami <i>Hopfa</i> i <i>histerezy</i>. 
-Układ ten stanowi jedno z pierwszych przykładów, w których gładkie nieliniowości prowadzą 
-do powstania <i>torusa</i> oraz jego rozpadu w kierunku chaosu. 
-Choć w literaturze często określa się go mianem <b>atraktora Aizawy</b>, 
-oryginalny opis równań pochodzi właśnie z pracy Langforda z 1984 roku. 
-Oryginalny układ równań przedstawia się następująco:
+<b>Atraktor Langforda</b> to model matematyczny układu chaotycznego wprowadzony przez
+kanadyjskiego matematyka Williama F. Langforda w 1984 roku podczas numerycznych badań
+nad interakcją między bifurkacjami typu <i>Hopfa</i> i <i>histerezy</i>.
+Był to jeden z pierwszych gładkich, trójwymiarowych układów, które pokazały,
+że sprzężenie tych bifurkacji może prowadzić do zjawiska <i>zaniku torusa</i>
+(<i>torus breakdown</i>) i pojawienia się chaosu.  
+Choć czasem jest mylony z atraktorem Aizawy,
+to właśnie praca Langforda jako pierwsza dostarczyła formalnego opisu
+tego typu dynamiki prowadzącej do zaniku torusa,
+podczas gdy Aizawa wprowadził później uproszczoną wersję tego układu.
+Oryginalny system zaproponowany przez Langforda (1984, s. 287) ma postać równań:
 </p>
 
 <!-- b) Układ równań -->
@@ -58,22 +47,29 @@ Oryginalny układ równań przedstawia się następująco:
 
 <!-- c) Parametry i interpretacja -->
 <p>
-W tym ujęciu parametry <i>μ</i>, <i>α</i> i <i>β</i> określają lokalną stabilność układu 
-oraz równowagę dynamiczną, natomiast <i>ℓ</i> i <i>p</i> odpowiadają za geometrię torusa. 
-Parametr <i>ω</i> kontroluje częstotliwość obrotu, 
-a <i>ε</i> wprowadza efekty <i>nieosiowosymetryczne</i>, 
-które stopniowo przekształcają torus w chaotyczny atraktor. 
-Wraz ze wzrostem wartości <i>ε</i> układ przechodzi od ruchu quasi-okresowego 
-do w pełni rozwiniętego chaosu — zjawiska znanego obecnie jako <b>rozpad torusa</b>.
+W tym ujęciu parametry <i>μ</i>, <i>α</i> i <i>β</i> określają lokalne tempo wzrostu
+i stabilność stanów stacjonarnych.
+Para <i>ℓ</i> i <i>p</i> wyznacza moment pojawienia się oraz geometrię
+bifurkacji Naimarka–Sackera (bifurkacji wtórnej Hopfa, czyli <i>torus bifurcation</i>),
+natomiast częstotliwość <i>ω</i> kontroluje ruch obrotowy w płaszczyźnie <i>x–y</i>.
+Parametr <i>ε</i> wprowadza <i>nieosiowo-symetryczne</i> zaburzenia,
+które niszczą gładki torus i inicjują kaskadę bifurkacji —
+synchronizację fazową, podwajanie okresu, a ostatecznie
+powstanidynamiki chaotycznej.
+Wraz ze wzrostem <i>ε</i> atraktor ewoluuje od gładkiego torusa,
+przez fraktalny „gruby torus”, aż do zanikającego (przejściowego) chaosu.
 </p>
 
 <!-- d) Źródło -->
-
 <p>
-Langford, W. F. (1984). <i>Numerical studies of torus bifurcations</i>. 
-Physica D: Nonlinear Phenomena, 10(1–2), 135–156. 
-<a href="https://doi.org/10.1016/0167-2789(84)90115-1" target="_blank">
-https://doi.org/10.1016/0167-2789(84)90115-1
+<b>Źródło:</b> Langford, W. F. (1984).
+<i>Numerical Studies of Torus Bifurcations.</i>
+W: <i>Nonlinear Oscillations in Biology and Chemistry</i>,
+seria <i>International Series of Numerical Mathematics</i>, t. 70,
+Birkhäuser Verlag, Basel, s. 285–295.
+<br>
+DOI:
+<a href="https://doi.org/10.1007/978-3-0348-6256-1_19" target="_blank">
+10.1007/978-3-0348-6256-1_19
 </a>
 </p>
-

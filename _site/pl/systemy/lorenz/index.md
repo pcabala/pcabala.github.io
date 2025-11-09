@@ -1,48 +1,73 @@
 ﻿---
+layout: systems
+title: "Atraktor Lorenza"
+video: "/assets/media/attractors/lorenz.webm"
+video_mp4: "/assets/media/attractors/lorenz.mp4"
+alpha: true
+stop_at: 11
 lang: pl
 ---
 
-{% include systems_subnav_pl.html %}
-
-<h1 class="attractor-title">Attractor</h1>
-
-<div class="attractor-hero">
-  <div class="media-frame">
-    <video autoplay="true" loop="true" muted playsinline preload="metadata">
-      <source src="/assets/media/attractors/lorenz.mp4?v=1" type="video/mp4">
-    </video>
-  </div>
-</div>
-
 <pre class="eq-plain">
-<b>Równania użyte w dodatku Attractor Builder (Blender):</b>
-dx/dt = <TODO: dx here>
-dy/dt = <TODO: dy here>
-dz/dt = <TODO: dz here>
-<b>Parametry</b>:
-| <TODO: parameters, e.g. a = ..., b = ...> |
+Attractor Builder (dodatek do Blendera)
+<b>Równania:</b>
+dx/dt = a * (y - x)
+dy/dt = x * (b - z) - y
+dz/dt = x * y - c * z
+<b>Parametry:</b>
+| a = 10 | b = 28 | c = 8/3 |
 <b>Ustawienia symulacji:</b>
-Initial state: <TODO>          # PL: Stan początkowy: <TODO>
-Method: <TODO>                 # np. RK4
-Time Step (dt): <TODO>
-Steps: <TODO>
-Burn-in: <TODO>
-Scale: <TODO>
+Stan początkowy: x₀ = 0.1, y₀ = 0.0, z₀ = 0.0
+Metoda: RK4
+Krok czasowy (dt): 0.01
+Liczba kroków: 15000
+Faza rozgrzewki (burn-in): 300
+Skala: 0.08
 </pre>
 
-#### Szczegóły modelu:
-<!-- a) Context / Kontekst -->
-<p><i><TODO: brief historical context & application (2–3 sentences). Mention original author & year.></i></p>
+<!-- a) Context and historical background -->
+<p>
+<b>Atraktor Lorenza</b> wywodzi się z uproszczonego modelu konwekcji atmosferycznej,
+opracowanego przez Edwarda N. Lorenza w 1963 roku w Massachusetts Institute of Technology.
+Podczas badań nad zredukowanym układem równań opisujących ruch płynu cieplnego Lorenz odkrył,
+że deterministyczne równania mogą prowadzić do pozornie nieregularnych, niepowtarzalnych trajektorii.
+Odkrycie to podważyło dominujące wówczas przekonanie o przewidywalności układów deterministycznych
+i zapoczątkowało rozwój współczesnej teorii chaosu.
+Układ ten stał się jednym z najbardziej rozpoznawalnych przykładów <i>dziwnego atraktora</i>
+oraz paradygmatem wrażliwości na warunki początkowe — tzw.
+„efektu motyla".
+Oryginalny układ równań przedstawiony przez Lorenza (1963, s. 135) ma postać:
+</p>
 
-<!-- b) (Optional) inline display of original equations can be added below if needed -->
-<!--
-<p class="mathline">\(\dot{x} = \dots\)</p>
-<p class="mathline">\(\dot{y} = \dots\)</p>
-<p class="mathline">\(\dot{z} = \dots\)</p>
--->
+<!-- b) System of equations -->
+<p class="mathline">\(\dot{X} = -\sigma X + \sigma Y\)</p>
+<p class="mathline">\(\dot{Y} = -XZ + rX - Y\)</p>
+<p class="mathline">\(\dot{Z} = XY - bZ\)</p>
 
-<!-- c) Parameters & interpretation / Parametry i interpretacja -->
-<p><i><TODO: key parameters and qualitative behavior: periodic → quasi-periodic → chaos, sensitivity, geometry></i></p>
+<!-- c) Parameters and interpretation -->
+<p>
+W tej formulacji <i>σ</i> oznacza liczbę Prandtla, wyrażającą stosunek
+między dyfuzyjnością pędu a dyfuzyjnością cieplną, natomiast <i>r</i> jest parametrem sterującym,
+analogicznym do zredukowanej liczby Rayleigha, która określa gradient temperatury
+napędzający konwekcję. Współczynnik <i>b</i> określa geometryczny stosunek wymiarów
+i pionową kompresję przepływu konwekcyjnego.  
+W notacji dodatku Blendera parametry te odpowiadają symbolom
+<i>a = σ</i>, <i>b = r</i> oraz <i>c = b</i>.  
+Dla klasycznego zestawu parametrów (<i>a</i>=10, <i>b</i>=28, <i>c</i>=8/3)
+układ generuje oscylacje aperiodyczne, lecz ograniczone, tworząc
+charakterystyczną dwuskrzydłową strukturę atraktora Lorenza.
+Nawet minimalne różnice w warunkach początkowych prowadzą do wykładniczego rozbiegania trajektorii,
+co ilustruje istotę deterministycznego chaosu.
+</p>
 
-<!-- d) Source / Źródło -->
-<p><i><TODO: first publication in APA with DOI and link></i></p>
+<!-- d) Source -->
+<p>
+<b>Źródło:</b> Lorenz, E. N. (1963).
+<i>Deterministic Nonperiodic Flow.</i>
+Journal of the Atmospheric Sciences, 20(2), 130–141.
+<br>
+DOI: 
+<a href="https://doi.org/10.1175/1520-0469(1963)020&lt;0130:DNF&gt;2.0.CO;2" target="_blank">
+10.1175/1520-0469(1963)020&lt;0130:DNF&gt;2.0.CO;2
+</a>
+</p>

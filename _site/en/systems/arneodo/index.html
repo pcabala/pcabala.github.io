@@ -63,7 +63,8 @@
     
 
     <main class="page-content" aria-label="Content">
-      <nav class="systems-subnav">
+      
+  <nav class="systems-subnav">
   <a href="/en/systems/arneodo/"                class="active">Arneodo</a>
   <a href="/en/systems/burke-shaw/"             >Burke–Shaw</a>
   <a href="/en/systems/chen/"                   >Chen</a>
@@ -92,6 +93,8 @@
 </nav>
 
 
+
+
 <div class="system-page">
 
   <!-- SECTION 1 — TITLE -->
@@ -100,19 +103,29 @@
   </section>
 
   <!-- SECTION 2 — VIDEO (optional) -->
-  
-	<section class="sys-video">
-	<div class="video-frame">
-	  <video autoplay loop muted playsinline preload="metadata" width="100%" style="background: transparent;">
-		<source src="/assets/media/attractors/arneodo.mp4?v=1" type="video/webm">
-		Your browser does not support the video tag.
-	  </video>
-	</div>
-  </section>
-  
+
+<section class="sys-video">
+  <div class="video-frame" style="position:relative">
+	<video id="sys-video"
+	  autoplay
+	  loop
+	  muted
+	  playsinline
+	  preload="metadata"
+	  width="100%"
+	  style="background:transparent">
+	  <source src="/assets/media/attractors/arneodo.mp4?v=1" type="video/webm">
+	  
+	  Your browser does not support the video tag.
+	</video>
+  </div>
+</section>
+
+
 
   <!-- SECTIONS 3–5 — CONTENT FROM PAGE (wrapped in index.md) -->
   <main class="sys-content" markdown="1">
+   <section class="sys-info">
     <section class="sys-equations">
 
   <p><strong>Attractor Builder (Blender add-on)</strong><br />
@@ -229,13 +242,19 @@ Arneodo, A., Coullet, P., &amp; Tresser, C. (1981).<br />
    4) INFORMATION
    ----------------------------------------- */
 .sys-info {
-  font-family: Georgia, serif;                /* keep site font (or inherit) */
-  text-align: left;                           /* left | justify */
-  font-size: 1.00em;                          /* same as body */
-  line-height: 1.6;                           /* comfortable reading */
-  margin: 1.2em 0 1.2em;                      /* outer spacing */
+  font-family: Georgia, serif;
+  text-align: left;
+  line-height: 1.6;
+  margin: 1.2em 0 1.2em;
 }
-.sys-info p { margin: 0.6em 0; }             /* paragraph spacing (0.4–0.8em typical) */
+
+/* Rozmiar i wcięcia NA SAMYCH akapitach (pewniej niż na kontenerze) */
+.sys-info p {
+  font-size: 1em;   /* ustaw dowolnie: 1.00–1.12em */
+  margin: 0.6em 0;
+  text-indent: 0;      /* wyłącza globalne p+p */
+}
+
 
 /* -----------------------------------------
    5) SOURCES
@@ -259,6 +278,8 @@ Arneodo, A., Coullet, P., &amp; Tresser, C. (1981).<br />
   .sys-video .video-frame { max-width: 100%; }
 }
 </style>
+
+
 
     </main>
   </body>

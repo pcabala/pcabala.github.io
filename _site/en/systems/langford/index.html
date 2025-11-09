@@ -51,7 +51,7 @@
     
       <span style="font-weight:bold;">EN</span> |
       
-      <a href="/pl/systemy/langford/">PL</a>
+      <a href="/pl/">PL</a>
     
   </span>
 </nav>
@@ -63,47 +63,74 @@
     
 
     <main class="page-content" aria-label="Content">
-      <nav class="systems-subnav">
-  <a href="/en/systems/arneodo/">Arneodo</a>
-  <a href="/en/systems/burke-shaw/">Burke–Shaw</a>
-  <a href="/en/systems/chen/">Chen</a>
-  <a href="/en/systems/dadras/">Dadras</a>
-  <a href="/en/systems/dequan-li/">Dequan–Li</a>
-  <a href="/en/systems/hadley/">Hadley</a>
-  <a href="/en/systems/halvorsen/">Halvorsen</a>
-  <a href="/en/systems/langford/" class="active">Langford</a>
-  <a href="/en/systems/lorenz/">Lorenz</a>
-  <a href="/en/systems/lotka-volterra/">Lotka–Volterra</a>
-  <a href="/en/systems/lu/">Lü</a>
-  <a href="/en/systems/newton-leipnik/">Newton–Leipnik</a>
-  <a href="/en/systems/nose-hoover/">Nosé–Hoover</a>
-  <a href="/en/systems/rabinovich-fabrikant/">Rabinovich–Fabrikant</a>
-  <a href="/en/systems/rikitake/">Rikitake</a>
-  <a href="/en/systems/rossler/">Rössler</a>
-  <a href="/en/systems/shimizu-morioka/">Shimizu–Morioka</a>
-  <a href="/en/systems/sprott-b/">Sprott B</a>
-  <a href="/en/systems/sprott-d/">Sprott D</a>
-  <a href="/en/systems/sprott-e/">Sprott E</a>
-  <a href="/en/systems/sprott-linz-f/">Sprott–Linz F</a>
-  <a href="/en/systems/sprott-linz-k/">Sprott–Linz K</a>
-  <a href="/en/systems/sprott-n/">Sprott N</a>
-  <a href="/en/systems/sprott-r/">Sprott R</a>
-  <a href="/en/systems/thomas/">Thomas</a>
+      
+  <nav class="systems-subnav">
+  <a href="/en/systems/arneodo/"                >Arneodo</a>
+  <a href="/en/systems/burke-shaw/"             >Burke–Shaw</a>
+  <a href="/en/systems/chen/"                   >Chen</a>
+  <a href="/en/systems/dadras/"                 >Dadras</a>
+  <a href="/en/systems/dequan-li/"              >Dequan–Li</a>
+  <a href="/en/systems/hadley/"                 >Hadley</a>
+  <a href="/en/systems/halvorsen/"              >Halvorsen</a>
+  <a href="/en/systems/langford/"               class="active">Langford</a>
+  <a href="/en/systems/lorenz/"                 >Lorenz</a>
+  <a href="/en/systems/lotka-volterra/"         >Lotka–Volterra</a>
+  <a href="/en/systems/lu/"                     >Lü</a>
+  <a href="/en/systems/newton-leipnik/"         >Newton–Leipnik</a>
+  <a href="/en/systems/nose-hoover/"            >Nosé–Hoover</a>
+  <a href="/en/systems/rabinovich-fabrikant/"   >Rabinovich–Fabrikant</a>
+  <a href="/en/systems/rikitake/"               >Rikitake</a>
+  <a href="/en/systems/rossler/"                >Rössler</a>
+  <a href="/en/systems/shimizu-morioka/"        >Shimizu–Morioka</a>
+  <a href="/en/systems/sprott-b/"               >Sprott B</a>
+  <a href="/en/systems/sprott-d/"               >Sprott D</a>
+  <a href="/en/systems/sprott-e/"               >Sprott E</a>
+  <a href="/en/systems/sprott-linz-f/"          >Sprott–Linz F</a>
+  <a href="/en/systems/sprott-linz-k/"          >Sprott–Linz K</a>
+  <a href="/en/systems/sprott-n/"               >Sprott N</a>
+  <a href="/en/systems/sprott-r/"               >Sprott R</a>
+  <a href="/en/systems/thomas/"                 >Thomas</a>
 </nav>
 
-<h1 class="attractor-title">Langford Attractor</h1>
 
-<div class="attractor-hero">
-  <div class="media-frame">
-    <video autoplay="" loop="" muted="" playsinline="" preload="metadata" width="100%" style="background: transparent;">
-      <source src="/assets/media/attractors/langford.webm?v=1" type="video/webm" />
-      Your browser does not support the video tag.
-    </video>
+
+
+<div class="system-page">
+
+  <!-- SECTION 1 — TITLE -->
+  <section class="sys-title">
+    <h1>Langford Attractor</h1>
+  </section>
+
+  <!-- SECTION 2 — VIDEO (optional) -->
+
+<section class="sys-video sys-video--alpha">
+  <div class="video-frame" style="position:relative">
+	<video id="sys-video"
+	  autoplay
+	  
+	  muted
+	  playsinline
+	  preload="metadata"
+	  width="100%"
+	  style="background:transparent">
+	  <source src="/assets/media/attractors/langford.webm" type="video/webm">
+	  
+	  <source src="/assets/media/attractors/langford.mp4" type="video/mp4">
+	  
+	  Your browser does not support the video tag.
+	</video>
   </div>
-</div>
+</section>
 
-<pre class="eq-plain">
-<b>Equations used in the Attractor Builder (Blender add-on):</b>
+
+
+  <!-- SECTIONS 3–5 — CONTENT FROM PAGE (wrapped in index.md) -->
+  <main class="sys-content" markdown="1">
+   <section class="sys-info">
+    <pre class="eq-plain">
+Attractor Builder (Blender add-on)
+<b>Equations:</b>
 dx/dt = (z - b) * x - d * y
 dy/dt = d * x + (z - b) * y
 dz/dt = c + a * z - (z**3)/3 - (x**2 + y**2) * (1 + e * z)
@@ -118,17 +145,19 @@ Burn-in: 300
 Scale: 0.1
 </pre>
 
-<h4 id="model-details">Model details:</h4>
 <!-- a) Context and historical background -->
 <p>
-The <b>Langford attractor</b> is a mathematical model of a chaotic system introduced by 
-Canadian mathematician <b>William F. Langford</b> in 1984 during his studies of the 
-interaction between <i>Hopf</i> and <i>hysteresis</i> bifurcations. 
-It represents one of the earliest examples of how a system with smooth nonlinearities 
-can give rise to <i>torus breakdown</i> and chaotic oscillations. 
-Although this system is often misidentified as the <b>Aizawa attractor</b>, 
-Langford’s publication predates Aizawa’s related work and provides the first formal definition of these equations. 
-The original system proposed by Langford (1984) was as follows:
+The <b>Langford attractor</b> is a mathematical model of a chaotic system introduced by
+Canadian mathematician William F. Langford in 1984 during his numerical studies
+of the interaction between <i>Hopf</i> and <i>hysteresis</i> bifurcations.
+It was one of the first smooth three-dimensional systems to demonstrate
+how the coupling of these bifurcations can lead to <i>torus breakdown</i>
+and the onset of chaos.  
+Although it is sometimes confused with the Aizawa attractor,
+Langford’s work provided the first formal formulation of this
+type of torus-breakdown dynamics, while Aizawa 
+introduced a related simplified version of the system.
+The original system proposed by Langford (1984, p. 287) is given by equations:
 </p>
 
 <!-- b) System of equations -->
@@ -138,24 +167,152 @@ The original system proposed by Langford (1984) was as follows:
 
 <!-- c) Parameters and interpretation -->
 <p>
-In this formulation, the parameters <i>μ</i>, <i>α</i>, and <i>β</i> define the basic dynamical balance 
-and control the local stability of fixed points, 
-while <i>ℓ</i> and <i>p</i> shape the toroidal structure of the flow. 
-The parameter <i>ω</i> determines the rotational frequency, 
-and <i>ε</i> introduces <i>non-axisymmetric</i> effects that gradually transform the torus 
-into a chaotic attractor. 
-Increasing <i>ε</i> causes the system to transition from quasi-periodic motion 
-to fully developed chaos, a process now known as <b>torus breakdown</b>. 
+In this formulation, the parameters <i>μ</i>, <i>α</i>, and <i>β</i> govern the
+local growth rates and stability of the stationary states.
+he pair <i>ℓ</i> and <i>p</i> determine the onset and geometry of the
+Naimark–Sacker (secondary Hopf or torus) bifurcation,
+while the frequency <i>ω</i> controls the rotational motion
+in the <i>x–y</i> plane.
+The parameter <i>ε</i> introduces <i>non-axisymmetric</i> perturbations
+that destroy the smooth invariant torus and initiate
+a cascade of bifurcations — phase locking, period doubling, and
+eventually chaotic dynamics.
+As <i>ε</i> increases, the attractor evolves from a smooth torus to a
+fractal "thick torus" and finally to transient chaos.
 </p>
 
 <!-- d) Source -->
 <p>
-Langford, W. F. (1984). <i>Numerical studies of torus bifurcations</i>. 
-Physica D: Nonlinear Phenomena, 10(1–2), 135–156. 
-<a href="https://doi.org/10.1016/0167-2789(84)90115-1" target="_blank">
-https://doi.org/10.1016/0167-2789(84)90115-1
+<b>Source:</b> Langford, W. F. (1984).
+<i>Numerical Studies of Torus Bifurcations.</i>
+In: <i>International Series of Numerical Mathematics</i>, Vol. 70,
+Birkhäuser Verlag, Basel, pp. 285–295.
+<br />
+DOI:
+<a href="https://doi.org/10.1007/978-3-0348-6256-1_19" target="_blank">
+10.1007/978-3-0348-6256-1_19
 </a>
 </p>
+
+
+  </main>
+
+</div>
+
+<style>
+/* -----------------------------------------
+   Layout container (width & spacing only)
+   ----------------------------------------- */
+.system-page {
+  max-width: 56.25em;            /* ~900px @ 16px base */
+  margin: 0 auto;
+  padding: 0 1.2rem 3rem;
+}
+
+/* -----------------------------------------
+   1) TITLE
+   ----------------------------------------- */
+.sys-title h1 {
+  font-family: "Courier New", monospace;                /* base font (try "Garamond", "Lora", "Palatino") */
+  text-align: left;                         /* alignment: left | center | right */
+  font-size: 1.1em;                           /* 1.0 = like body; 1.2 = 20% larger */
+  font-weight: 600;                           /* 400 normal, 600 semi-bold, 700 bold */
+  line-height: 1.3;                           /* 1.2–1.4 typical for titles */
+  margin: 1.5em 0 1.2em;                      /* top, sides, bottom */
+}
+
+/* -----------------------------------------
+   2) VIDEO (responsive)
+   ----------------------------------------- */
+.sys-video {
+  display: flex;                              /* center the frame */
+  justify-content: left;
+  margin: 1.2em 0 1.6em;
+}
+.sys-video .video-frame {
+  width: 100%;
+  max-width: 37.5em;                          /* ~600px @ 16px base (try 32–44em) */
+  aspect-ratio: 4 / 3;                        /* change to 16 / 9 if you prefer */
+  border-radius: 0.75em;                      /* rounded corners */
+  overflow: hidden;                           /* crop overflow */
+  background: #000;                           /* placeholder before video loads */
+}
+.sys-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;                          /* 'contain' if you want letterboxing */
+}
+
+/* -----------------------------------------
+   3) EQUATIONS & PARAMETERS
+   ----------------------------------------- */
+.sys-equations {
+  font-family: "Courier New", monospace;      /* or "Fira Code", monospace */
+  text-align: left;                           /* left | center | justify */
+  font-size: 0.95em;                          /* slightly smaller than body */
+  line-height: 1.5;                           /* 1.4–1.6 typical for code/equations */
+  margin: 1.2em 0 1.5em;                      /* outer spacing */
+  padding: 0.8em 1.0em;                       /* inner padding */
+  border-radius: 0.5em;                       /* soft corners */
+  /* background: rgba(0,0,0,.03); */          /* optional subtle panel */
+}
+/* ensure inner elements follow the block formatting */
+.sys-equations p,
+.sys-equations pre,
+.sys-equations code {
+  font: inherit;                              /* inherit font family & size */
+  text-align: inherit;                        /* inherit alignment */
+  line-height: inherit;                       /* inherit line height */
+}
+.sys-equations p { margin: 0.5em 0; }
+
+.u {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;  /* grubość linii */
+  text-underline-offset: 2px;      /* odstęp linii od tekstu */
+}
+
+/* -----------------------------------------
+   4) INFORMATION
+   ----------------------------------------- */
+.sys-info {
+  font-family: Georgia, serif;
+  text-align: left;
+  line-height: 1.6;
+  margin: 1.2em 0 1.2em;
+}
+
+/* Rozmiar i wcięcia NA SAMYCH akapitach (pewniej niż na kontenerze) */
+.sys-info p {
+  font-size: 1em;   /* ustaw dowolnie: 1.00–1.12em */
+  margin: 0.6em 0;
+  text-indent: 0;      /* wyłącza globalne p+p */
+}
+
+
+/* -----------------------------------------
+   5) SOURCES
+   ----------------------------------------- */
+.sys-sources {
+  font-family: Georgia, serif;                /* or "Times New Roman", serif */
+  text-align: left;
+  font-size: 0.95em;                          /* slightly smaller for compact lists */
+  line-height: 1.4;
+  margin: 1.2em 0 0;                          /* gap before references block */
+}
+.sys-sources p,
+.sys-sources li { margin: 0.4em 0; }
+
+/* -----------------------------------------
+   Mobile tweaks (simple and predictable)
+   ----------------------------------------- */
+@media (max-width: 480px){
+  .sys-title h1 { font-size: 1.0em; }         /* smaller title on phones */
+  .sys-equations { font-size: 0.9em; }        /* slightly smaller equations */
+  .sys-video .video-frame { max-width: 100%; }
+}
+</style>
+
 
 
     </main>
