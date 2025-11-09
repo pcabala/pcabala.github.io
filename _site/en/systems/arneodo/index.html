@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>pcabala.github.io</title>
+    <title>Arneodo Attractor</title>
     
     <script id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
@@ -64,76 +64,201 @@
 
     <main class="page-content" aria-label="Content">
       <nav class="systems-subnav">
-  <a href="/en/systems/arneodo/" class="active">Arneodo</a>
-  <a href="/en/systems/burke-shaw/">Burke–Shaw</a>
-  <a href="/en/systems/chen/">Chen</a>
-  <a href="/en/systems/dadras/">Dadras</a>
-  <a href="/en/systems/dequan-li/">Dequan–Li</a>
-  <a href="/en/systems/hadley/">Hadley</a>
-  <a href="/en/systems/halvorsen/">Halvorsen</a>
-  <a href="/en/systems/langford/">Langford</a>
-  <a href="/en/systems/lorenz/">Lorenz</a>
-  <a href="/en/systems/lotka-volterra/">Lotka–Volterra</a>
-  <a href="/en/systems/lu/">Lü</a>
-  <a href="/en/systems/newton-leipnik/">Newton–Leipnik</a>
-  <a href="/en/systems/nose-hoover/">Nosé–Hoover</a>
-  <a href="/en/systems/rabinovich-fabrikant/">Rabinovich–Fabrikant</a>
-  <a href="/en/systems/rikitake/">Rikitake</a>
-  <a href="/en/systems/rossler/">Rössler</a>
-  <a href="/en/systems/shimizu-morioka/">Shimizu–Morioka</a>
-  <a href="/en/systems/sprott-b/">Sprott B</a>
-  <a href="/en/systems/sprott-d/">Sprott D</a>
-  <a href="/en/systems/sprott-e/">Sprott E</a>
-  <a href="/en/systems/sprott-linz-f/">Sprott–Linz F</a>
-  <a href="/en/systems/sprott-linz-k/">Sprott–Linz K</a>
-  <a href="/en/systems/sprott-n/">Sprott N</a>
-  <a href="/en/systems/sprott-r/">Sprott R</a>
-  <a href="/en/systems/thomas/">Thomas</a>
+  <a href="/en/systems/arneodo/"                class="active">Arneodo</a>
+  <a href="/en/systems/burke-shaw/"             >Burke–Shaw</a>
+  <a href="/en/systems/chen/"                   >Chen</a>
+  <a href="/en/systems/dadras/"                 >Dadras</a>
+  <a href="/en/systems/dequan-li/"              >Dequan–Li</a>
+  <a href="/en/systems/hadley/"                 >Hadley</a>
+  <a href="/en/systems/halvorsen/"              >Halvorsen</a>
+  <a href="/en/systems/langford/"               >Langford</a>
+  <a href="/en/systems/lorenz/"                 >Lorenz</a>
+  <a href="/en/systems/lotka-volterra/"         >Lotka–Volterra</a>
+  <a href="/en/systems/lu/"                     >Lü</a>
+  <a href="/en/systems/newton-leipnik/"         >Newton–Leipnik</a>
+  <a href="/en/systems/nose-hoover/"            >Nosé–Hoover</a>
+  <a href="/en/systems/rabinovich-fabrikant/"   >Rabinovich–Fabrikant</a>
+  <a href="/en/systems/rikitake/"               >Rikitake</a>
+  <a href="/en/systems/rossler/"                >Rössler</a>
+  <a href="/en/systems/shimizu-morioka/"        >Shimizu–Morioka</a>
+  <a href="/en/systems/sprott-b/"               >Sprott B</a>
+  <a href="/en/systems/sprott-d/"               >Sprott D</a>
+  <a href="/en/systems/sprott-e/"               >Sprott E</a>
+  <a href="/en/systems/sprott-linz-f/"          >Sprott–Linz F</a>
+  <a href="/en/systems/sprott-linz-k/"          >Sprott–Linz K</a>
+  <a href="/en/systems/sprott-n/"               >Sprott N</a>
+  <a href="/en/systems/sprott-r/"               >Sprott R</a>
+  <a href="/en/systems/thomas/"                 >Thomas</a>
 </nav>
 
-<h1 class="attractor-title">Arneodo Attractor</h1>
 
-<div class="attractor-hero">
-  <div class="media-frame">
-    <video autoplay="true" loop="true" muted="" playsinline="" preload="metadata">
-      <source src="/assets/media/attractors/arneodo.mp4?v=1" type="video/mp4" />
-    </video>
-  </div>
+<div class="system-page">
+
+  <!-- SECTION 1 — TITLE -->
+  <section class="sys-title">
+    <h1>Arneodo Attractor</h1>
+  </section>
+
+  <!-- SECTION 2 — VIDEO (optional) -->
+  
+	<section class="sys-video">
+	<div class="video-frame">
+	  <video autoplay loop muted playsinline preload="metadata" width="100%" style="background: transparent;">
+		<source src="/assets/media/attractors/arneodo.mp4?v=1" type="video/webm">
+		Your browser does not support the video tag.
+	  </video>
+	</div>
+  </section>
+  
+
+  <!-- SECTIONS 3–5 — CONTENT FROM PAGE (wrapped in index.md) -->
+  <main class="sys-content" markdown="1">
+    <section class="sys-equations">
+
+  <p><strong>Attractor Builder (Blender add-on)</strong><br />
+<span class="u">Equations:</span><br />
+<code class="language-plaintext highlighter-rouge">dx/dt = y</code> <br />
+<code class="language-plaintext highlighter-rouge">dy/dt = z</code><br />
+<code class="language-plaintext highlighter-rouge">dz/dt = -a*x - b*y + c*x**3</code><br />
+<span class="u">Parameters:</span><br />
+| a = -5.5 | b = 3.5 | c = -1 | <br />
+<span class="u">Simulation settings:</span><br />
+Initial state: x_0 = 0.1, y_0 = 0.0, z_0 = 0.0 <br />
+Method: RK4 <br />
+Time Step (dt): 0.015 <br />
+Steps: 15000 <br />
+Burn-in: 300 <br />
+Scale: 0.1 <br /></p>
+
+</section>
+
+<section class="sys-info">
+  <p><strong>Model details</strong></p>
+
+  <p>This attractor shows a transition from periodic to chaotic behavior.
+Mathematically, it originates from a third-order system with a cubic term in <em>x</em>.
+Use this space for original formulas and narrative (you can use <em>italic</em> and <strong>bold</strong>).</p>
+</section>
+
+<section class="sys-sources">
+  <p><strong>References</strong><br />
+Arneodo, A., Coullet, P., &amp; Tresser, C. (1981).<br />
+<em>A possible new mechanism for the onset of turbulence.</em><br />
+<em>Physics Letters A</em>, 81(4), 197–201.<br />
+<a href="https://doi.org/10.1016/0375-9601(81)90239-5">DOI</a></p>
+</section>
+
+  </main>
+
 </div>
 
-<pre class="eq-plain">
-<b>Equations used in the Attractor Builder (Blender add-on):</b>
-dx/dt = y
-dy/dt = z
-dz/dt = -a*x - b*y + c*x**3
-<b>Parameters</b>:
-|a = -5,5 | b = 3,5 | c = -1 |
-<b>Simulation settings:</b>
-Initial state: x₀ = 0.1, y₀ = 0.0, z₀ = 0.0
-Min Step: 0.000001
-Max Step: 0.01
-Steps: 15000
-Burn-in: 1000
-Scale: 0.2
-</pre>
+<style>
+/* -----------------------------------------
+   Layout container (width & spacing only)
+   ----------------------------------------- */
+.system-page {
+  max-width: 56.25em;            /* ~900px @ 16px base */
+  margin: 0 auto;
+  padding: 0 1.2rem 3rem;
+}
 
-<h4 id="model-details">Model details:</h4>
-<!-- a) Context / Kontekst -->
-<p><i>&lt;TODO: brief historical context &amp; application (2–3 sentences). Mention original author &amp; year.&gt;</i></p>
+/* -----------------------------------------
+   1) TITLE
+   ----------------------------------------- */
+.sys-title h1 {
+  font-family: "Courier New", monospace;                /* base font (try "Garamond", "Lora", "Palatino") */
+  text-align: left;                         /* alignment: left | center | right */
+  font-size: 1.1em;                           /* 1.0 = like body; 1.2 = 20% larger */
+  font-weight: 600;                           /* 400 normal, 600 semi-bold, 700 bold */
+  line-height: 1.3;                           /* 1.2–1.4 typical for titles */
+  margin: 1.5em 0 1.2em;                      /* top, sides, bottom */
+}
 
-<!-- b) (Optional) inline display of original equations can be added below if needed -->
-<!--
-<p class="mathline">\(\dot{x} = \dots\)</p>
-<p class="mathline">\(\dot{y} = \dots\)</p>
-<p class="mathline">\(\dot{z} = \dots\)</p>
--->
+/* -----------------------------------------
+   2) VIDEO (responsive)
+   ----------------------------------------- */
+.sys-video {
+  display: flex;                              /* center the frame */
+  justify-content: left;
+  margin: 1.2em 0 1.6em;
+}
+.sys-video .video-frame {
+  width: 100%;
+  max-width: 37.5em;                          /* ~600px @ 16px base (try 32–44em) */
+  aspect-ratio: 4 / 3;                        /* change to 16 / 9 if you prefer */
+  border-radius: 0.75em;                      /* rounded corners */
+  overflow: hidden;                           /* crop overflow */
+  background: #000;                           /* placeholder before video loads */
+}
+.sys-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;                          /* 'contain' if you want letterboxing */
+}
 
-<!-- c) Parameters & interpretation / Parametry i interpretacja -->
-<p><i>&lt;TODO: key parameters and qualitative behavior: periodic → quasi-periodic → chaos, sensitivity, geometry&gt;</i></p>
+/* -----------------------------------------
+   3) EQUATIONS & PARAMETERS
+   ----------------------------------------- */
+.sys-equations {
+  font-family: "Courier New", monospace;      /* or "Fira Code", monospace */
+  text-align: left;                           /* left | center | justify */
+  font-size: 0.95em;                          /* slightly smaller than body */
+  line-height: 1.5;                           /* 1.4–1.6 typical for code/equations */
+  margin: 1.2em 0 1.5em;                      /* outer spacing */
+  padding: 0.8em 1.0em;                       /* inner padding */
+  border-radius: 0.5em;                       /* soft corners */
+  /* background: rgba(0,0,0,.03); */          /* optional subtle panel */
+}
+/* ensure inner elements follow the block formatting */
+.sys-equations p,
+.sys-equations pre,
+.sys-equations code {
+  font: inherit;                              /* inherit font family & size */
+  text-align: inherit;                        /* inherit alignment */
+  line-height: inherit;                       /* inherit line height */
+}
+.sys-equations p { margin: 0.5em 0; }
 
-<!-- d) Source / Źródło -->
-<p>Arneodo, A., Coullet, P., &amp; Tresser, C. (1981).<i> A possible new mechanism for the onset of turbulence.</i> Physics Letters A, 81(4), 197–201.
- https://doi.org/10.1016/0375-9601(81)90239-5&gt;</p>
+.u {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;  /* grubość linii */
+  text-underline-offset: 2px;      /* odstęp linii od tekstu */
+}
+
+/* -----------------------------------------
+   4) INFORMATION
+   ----------------------------------------- */
+.sys-info {
+  font-family: Georgia, serif;                /* keep site font (or inherit) */
+  text-align: left;                           /* left | justify */
+  font-size: 1.00em;                          /* same as body */
+  line-height: 1.6;                           /* comfortable reading */
+  margin: 1.2em 0 1.2em;                      /* outer spacing */
+}
+.sys-info p { margin: 0.6em 0; }             /* paragraph spacing (0.4–0.8em typical) */
+
+/* -----------------------------------------
+   5) SOURCES
+   ----------------------------------------- */
+.sys-sources {
+  font-family: Georgia, serif;                /* or "Times New Roman", serif */
+  text-align: left;
+  font-size: 0.95em;                          /* slightly smaller for compact lists */
+  line-height: 1.4;
+  margin: 1.2em 0 0;                          /* gap before references block */
+}
+.sys-sources p,
+.sys-sources li { margin: 0.4em 0; }
+
+/* -----------------------------------------
+   Mobile tweaks (simple and predictable)
+   ----------------------------------------- */
+@media (max-width: 480px){
+  .sys-title h1 { font-size: 1.0em; }         /* smaller title on phones */
+  .sys-equations { font-size: 0.9em; }        /* slightly smaller equations */
+  .sys-video .video-frame { max-width: 100%; }
+}
+</style>
 
     </main>
   </body>

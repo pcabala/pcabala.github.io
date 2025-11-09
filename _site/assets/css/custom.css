@@ -191,14 +191,24 @@ thead th {
 
 .attractor-hero .media-frame {
   width: 100%;
-  aspect-ratio: 1 / 1;          /* modern browsers */
-  background: #f3f4f6;
-  border: 1px solid #e5e7eb;
+  aspect-ratio: 4 / 3;
+  background: transparent;      /* zamiast #f3f4f6 */
+  border: none;                 /* usuń szarą ramkę */
   border-radius: 8px;
   overflow: hidden;
   display: grid;
   place-items: center;
 }
+
+.attractor-hero .media-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;           /* zachowuje proporcje 4:3 */
+  background: transparent;
+  mix-blend-mode: normal;        /* możesz zmienić na 'screen' dla efektu świetlnego */
+  display: block;
+}
+
 
 .attractor-hero video,
 .attractor-hero img {
@@ -237,7 +247,7 @@ pre.eq-plain {
 
 .attractor-hero .media-frame{
   width: 100%;
-  aspect-ratio: 1 / 1;        /* nowoczesne przeglądarki */
+  aspect-ratio: 4 / 3;        /* nowoczesne przeglądarki */
   min-height: 320px;          /* Fallback gdyby aspect-ratio nie zadziałało */
   background: transparent;    /* zlewa się z body (#fafafa) */
   border: none;               /* bez ramki */
@@ -288,4 +298,71 @@ nav a.active {
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+/* ===========================
+   Mobile-first hardening pack
+   =========================== */
+
+/* 2.1 Pudełkowanie i skalowanie tekstu na iOS */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+/* 2.2 Kontener strony – utrzymaj max szerokość, ale dodaj bezpieczne marginesy na telefonie */
+body {
+  margin: 2em auto;
+  max-width: 900px;
+  padding: 0 1.2em;
+}
+@media (max-width: 420px) {
+  body { padding: 0 0.9em; margin: 1.2em auto; }
+}
+
+/* 2.3 Płynna typografia nagłówków i treści */
+h1 { font-size: clamp(26px, 4.5vw, 34px); }
+h2 { font-size: clamp(20px, 3.6vw, 24px); }
+h3 { font-size: clamp(18px, 3.2vw, 20px); }
+p, li { font-size: clamp(16px, 2.6vw, 18px); }
+
+/* 2.4 Akapity: na bardzo wąskich ekranach wyłącz wcięcie i justowanie dla czytelności */
+@media (max-width: 420px) {
+  p { text-align: left; }
+  p + p { text-indent: 0; }
+}
+
+/* 2.5 Grafiki, wideo, iframe – zawsze w ramce rodzica */
+img, svg, video, canvas, iframe { max-width: 100%; height: auto; }
+
+/* 2.6 Bloki kodu i tabelki – zapobiegaj „rozpychaniu” ekranu */
+pre, code { white-space: pre-wrap; word-break: break-word; }
+table { width: 100%; border-collapse: collapse; display: block; overflow-x: auto; }
+th, td { padding: .5rem; }
+
+/* 2.7 Top nav/subnav – oddech na ciasnych ekranach */
+nav { gap: 0.4rem 0.6rem; }
+@media (max-width: 360px) {
+  nav { justify-content: flex-start; }
+}
+
+/* 2.8 Systemy – subtelne przewijanie poziome, gdy linków jest dużo */
+.systems-subnav { overflow-x: auto; white-space: nowrap; scrollbar-width: thin; }
+
+/* 2.9 Kafelek wideo – miękki fallback na bardzo wąskich ekranach */
+@media (max-width: 360px) {
+  .attractor-hero .media-frame { min-height: 260px; }
+}
+
+/* 2.10 „Tap targets” – linki bardziej dotykalne */
+a { -webkit-tap-highlight-color: rgba(0,0,0,0.1); }
+
+
+/* ─── Override dla wideo na stronach systemów ───────────────────────── */
+.attractor-hero .media-frame {
+  max-width: 960px;      /* docelowa szerokość */
+  aspect-ratio: 4 / 3;   /* 960×720 */
+}
+
+.attractor-hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* lub 'contain', jeśli wolisz czarne pasy zamiast cropa */
 }

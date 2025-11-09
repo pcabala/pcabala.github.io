@@ -1,49 +1,42 @@
 ﻿---
+layout: systems
 lang: en
+permalink: /en/systems/arneodo/
+title: Arneodo Attractor
+video: /assets/media/attractors/arneodo.mp4?v=1
 ---
 
-{% include systems_subnav_en.html %}
+<section class="sys-equations" markdown="1">
 
-<h1 class="attractor-title">Arneodo Attractor</h1>
+**Attractor Builder (Blender add-on)**<br>
+<span class="u">Equations:</span><br>
+`dx/dt = y` <br>
+`dy/dt = z`<br>
+`dz/dt = -a*x - b*y + c*x**3`<br>
+<span class="u">Parameters:</span>  
+| a = -5.5 | b = 3.5 | c = -1 | <br>
+<span class="u">Simulation settings:</span>  
+Initial state: x_0 = 0.1, y_0 = 0.0, z_0 = 0.0 <br>
+Method: RK4 <br>
+Time Step (dt): 0.015 <br>
+Steps: 15000 <br>
+Burn-in: 300 <br>
+Scale: 0.1 <br>
 
-<div class="attractor-hero">
-  <div class="media-frame">
-    <video autoplay="true" loop="true" muted playsinline preload="metadata">
-      <source src="/assets/media/attractors/arneodo.mp4?v=1" type="video/mp4">
-    </video>
-  </div>
-</div>
+</section>
 
-<pre class="eq-plain">
-<b>Equations used in the Attractor Builder (Blender add-on):</b>
-dx/dt = y
-dy/dt = z
-dz/dt = -a*x - b*y + c*x**3
-<b>Parameters</b>:
-|a = -5,5 | b = 3,5 | c = -1 |
-<b>Simulation settings:</b>
-Initial state: x₀ = 0.1, y₀ = 0.0, z₀ = 0.0
-Min Step: 0.000001
-Max Step: 0.01
-Steps: 15000
-Burn-in: 1000
-Scale: 0.2
-</pre>
+<section class="sys-info" markdown="1">
+**Model details**
 
-#### Model details:
-<!-- a) Context / Kontekst -->
-<p><i><TODO: brief historical context & application (2–3 sentences). Mention original author & year.></i></p>
+This attractor shows a transition from periodic to chaotic behavior.
+Mathematically, it originates from a third-order system with a cubic term in *x*.
+Use this space for original formulas and narrative (you can use *italic* and **bold**).
+</section>
 
-<!-- b) (Optional) inline display of original equations can be added below if needed -->
-<!--
-<p class="mathline">\(\dot{x} = \dots\)</p>
-<p class="mathline">\(\dot{y} = \dots\)</p>
-<p class="mathline">\(\dot{z} = \dots\)</p>
--->
-
-<!-- c) Parameters & interpretation / Parametry i interpretacja -->
-<p><i><TODO: key parameters and qualitative behavior: periodic → quasi-periodic → chaos, sensitivity, geometry></i></p>
-
-<!-- d) Source / Źródło -->
-<p>Arneodo, A., Coullet, P., & Tresser, C. (1981).<i> A possible new mechanism for the onset of turbulence.</i> Physics Letters A, 81(4), 197–201.
- https://doi.org/10.1016/0375-9601(81)90239-5></p>
+<section class="sys-sources" markdown="1">
+**References**  
+Arneodo, A., Coullet, P., & Tresser, C. (1981).  
+*A possible new mechanism for the onset of turbulence.*  
+_Physics Letters A_, 81(4), 197–201.  
+[DOI](https://doi.org/10.1016/0375-9601(81)90239-5)
+</section>

@@ -6,10 +6,10 @@ lang: en
 
 <h1 class="attractor-title">Attractor</h1>
 
-<div class="attractor-hero">
-  <div class="media-frame">
-    <video autoplay="true" loop="true" muted playsinline preload="metadata">
-      <source src="/assets/media/attractors/chen.mp4?v=1" type="video/mp4">
+<div class="sys-video">
+  <div class="video-frame">
+    <video autoplay loop muted playsinline preload="metadata">
+      <source src="/assets/media/attractors/NAZWA.mp4?v=2" type="video/mp4">
     </video>
   </div>
 </div>
