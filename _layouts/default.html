@@ -5,6 +5,9 @@ layout: base
 <html lang="{{ page.lang | default: 'en' }}">
   <head>
     <meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
     <title>{{ page.title | default: site.title }}</title>
     {% if page.alt_url and page.alt_lang %}
       <link rel="alternate" hreflang="{{ page.alt_lang }}" href="{{ page.alt_url | relative_url }}">
