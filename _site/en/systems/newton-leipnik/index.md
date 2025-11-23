@@ -1,48 +1,66 @@
 ﻿---
+layout: systems
+title: "Newton–Leipnik Attractor"
+video: "/assets/media/attractors/newton-leipnik.webm"
+video_mp4: "/assets/media/attractors/newton-leipnik.mp4"
+alpha: true
+stop_at: 11
 lang: en
+alt_url: /pl/systemy/newton-leipnik/
 ---
 
-{% include systems_subnav_en.html %}
-
-<h1 class="attractor-title">Attractor</h1>
-
-<div class="attractor-hero">
-  <div class="media-frame">
-    <video autoplay="true" loop="true" muted playsinline preload="metadata">
-      <source src="/assets/media/attractors/newton-leipnik.mp4?v=1" type="video/mp4">
-    </video>
-  </div>
-</div>
-
 <pre class="eq-plain">
-<b>Equations used in the Attractor Builder (Blender add-on):</b>
-dx/dt = <TODO: dx here>
-dy/dt = <TODO: dy here>
-dz/dt = <TODO: dz here>
-<b>Parameters</b>:
-| <TODO: parameters, e.g. a = ..., b = ...> |
+Attractor Builder (Blender Add-on)
+<b>Equations:</b>
+ẋ = -b*x + y + 10*y*z
+ẏ = -x - b*y + 5*x*z
+ż =  a*z - 5*x*y
+<b>Parameters:</b>
+| a = 0.175 | b = 0.4 |
 <b>Simulation settings:</b>
-Initial state: <TODO>          # PL: Stan początkowy: <TODO>
-Method: <TODO>                 # np. RK4
-Time Step (dt): <TODO>
-Steps: <TODO>
-Burn-in: <TODO>
-Scale: <TODO>
+Initial state: x₀ = 0.349, y₀ = 0, z₀ = -0.18
+Method: RK4
+Time Step (dt): 0.01
+Steps: 50000
+Burn-in: 0
+Scale: 3
 </pre>
 
-#### Model details:
-<!-- a) Context / Kontekst -->
-<p><i><TODO: brief historical context & application (2–3 sentences). Mention original author & year.></i></p>
+<p>
+The <b>Newton–Leipnik attractor</b> was introduced in 1981 by R.B. Leipnik and
+T.A. Newton in their study of rigid body motion with linear feedback control.
+By modifying the classical Euler equations and adding a linear feedback term,
+the authors obtained a three–dimensional quadratic dynamical system exhibiting
+surprisingly complex behavior. The original system presented in their paper
+has the form (1981, p. 65, Eq. 10):
+</p>
 
-<!-- b) (Optional) inline display of original equations can be added below if needed -->
-<!--
-<p class="mathline">\(\dot{x} = \dots\)</p>
-<p class="mathline">\(\dot{y} = \dots\)</p>
-<p class="mathline">\(\dot{z} = \dots\)</p>
--->
+<p class="mathline">\( \dot{x} = -0.4\,x + y + 10\,y z \)</p>
+<p class="mathline">\( \dot{y} = -x - 0.4\,y + 5\,x z \)</p>
+<p class="mathline">\( \dot{z} = \alpha z - 5\,x y \)</p>
 
-<!-- c) Parameters & interpretation / Parametry i interpretacja -->
-<p><i><TODO: key parameters and qualitative behavior: periodic → quasi-periodic → chaos, sensitivity, geometry></i></p>
+<p>
+For the parameter \(\alpha = 0.175\), the system generates two coexisting
+strange attractors. Which of them a trajectory converges to depends entirely
+on the initial conditions. The authors demonstrated that even a very small
+change in the third coordinate can send the trajectory to a different
+attractor: the point \((0.349,\,0,\,-0.160)\) leads to the upper attractor (U),
+while \((0.349,\,0,\,-0.180)\) leads to the lower attractor (L).
 
-<!-- d) Source / Źródło -->
-<p><i><TODO: first publication in APA with DOI and link></i></p>
+The two attractors have visibly different geometry. The U–attractor is broader
+and more irregular, while the L–attractor is tighter and more structured.
+The coexistence of two chaotic sets in such a smooth system is rare. The
+boundary between their basins of attraction is highly intricate, reflecting
+the system’s strong sensitivity to minimal changes in the initial state.
+The oscillating, looping trajectories characteristic of this motion were
+described by the authors using the evocative term “dipsy–doodle”.
+</p>
+
+<p><b>Source:</b></p>
+<p class="hanging-indent">
+Leipnik, R. B., & Newton, T. A. (1981). Double strange attractors in rigid body motion with linear feedback control.
+<i>Physics Letters A, 86(2), 63–67.</i>
+DOI: <a href="https://doi.org/10.1016/0375-9601(81)90165-1" target="_blank">
+https://doi.org/10.1016/0375-9601(81)90165-1
+</a>
+</p>

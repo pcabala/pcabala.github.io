@@ -2,30 +2,30 @@ en:
   nav:
     home: Home
     systems: Systems
-    gallery: Gallery
-    integration: Integration
+    methods: Methods
     addon: Add-on
-    about: About
+    gallery: Gallery
+    about: Info
   paths:
     home: /en/
     systems: /en/systems/lorenz/
+    methods: /en/methods/
     gallery: /en/gallery/
-    integration: /en/integration/
     addon: /en/addon/
-    about: /en/about/
+    about: /en/info/
 
 pl:
   nav:
     home: Start
     systems: Systemy
-    gallery: Galeria
-    integration: Integracja
+    methods: Metody
     addon: Add-on
-    about: O projekcie
+    gallery: Galeria
+    about: Info
   paths:
     home: /pl/
     systems: /pl/systemy/lorenz/
-    gallery: /pl/galeria/
-    integration: /pl/integracja/
+    methods: /pl/metody/
     addon: /pl/addon/
-    about: /pl/o-projekcie/
+    gallery: /pl/galeria/
+    about: /pl/info/

@@ -3,9 +3,10 @@ layout: systems
 title: "Langford Attractor"
 video: "/assets/media/attractors/langford.webm"
 video_mp4: "/assets/media/attractors/langford.mp4"
-alpha: true   # włącza transparentny styl + object-fit: contain tylko na tej stronie
-stop_at: 11   # w sekundach; usuń ten wiersz, jeśli chcesz zwykłą pętlę (loop)
+alpha: true
+stop_at: 11
 lang: en
+alt_url: /pl/systemy/langford/
 ---
 
 
@@ -14,9 +15,9 @@ lang: en
 <pre class="eq-plain">
 Attractor Builder (Blender add-on)
 <b>Equations:</b>
-dx/dt = (z - b) * x - d * y
-dy/dt = d * x + (z - b) * y
-dz/dt = c + a * z - (z**3)/3 - (x**2 + y**2) * (1 + e * z)
+ẋ = (z - b) * x - d * y
+ẏ = d * x + (z - b) * y
+ż = c + a * z - (z**3)/3 - (x**2 + y**2) * (1 + e * z)
 <b>Parameters</b>:
 | a = 0.95 | b = 0.7 | c = 0.6 | d = 3.5 | e = 0.25 |
 <b>Simulation settings:</b>

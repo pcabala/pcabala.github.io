@@ -150,6 +150,16 @@ layout: default
 }
 .sys-sources p,
 .sys-sources li { margin: 0.4em 0; }
+/* Hanging indent for multi-line references */
+.sys-sources .hanging-indent{
+  display:block;
+  max-width:min(72ch, 100%); /* zawijaj tylko treść pozycji */
+  margin-left:0;
+  padding-left:3ch;
+  text-indent:-3ch;
+}
+
+
 
 /* -----------------------------------------
    Mobile tweaks (simple and predictable)

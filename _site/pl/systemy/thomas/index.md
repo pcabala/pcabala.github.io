@@ -1,48 +1,61 @@
 ﻿---
+layout: systems
+title: "Atraktor Thomasa"
+video: "/assets/media/attractors/thomas.webm"
+video_mp4: "/assets/media/attractors/thomas.mp4"
+alpha: true
+stop_at: 11
 lang: pl
+alt_url: /en/systems/thomas/
 ---
 
-{% include systems_subnav_pl.html %}
-
-<h1 class="attractor-title">Attractor</h1>
-
-<div class="attractor-hero">
-  <div class="media-frame">
-    <video autoplay="true" loop="true" muted playsinline preload="metadata">
-      <source src="/assets/media/attractors/thomas.mp4?v=1" type="video/mp4">
-    </video>
-  </div>
-</div>
-
 <pre class="eq-plain">
-<b>Równania użyte w dodatku Attractor Builder (Blender):</b>
-dx/dt = <TODO: dx here>
-dy/dt = <TODO: dy here>
-dz/dt = <TODO: dz here>
-<b>Parametry</b>:
-| <TODO: parameters, e.g. a = ..., b = ...> |
+Attractor Builder (dodatek do Blendera)
+<b>Równania:</b>
+ẋ = - b*x + sin(y)
+ẏ = - b*y + sin(z)
+ż = - b*z + sin(x)
+<b>Parametry:</b>
+| b = 1.5 |
 <b>Ustawienia symulacji:</b>
-Initial state: <TODO>          # PL: Stan początkowy: <TODO>
-Method: <TODO>                 # np. RK4
-Time Step (dt): <TODO>
-Steps: <TODO>
-Burn-in: <TODO>
-Scale: <TODO>
+Stan początkowy: x₀ = 0.02, y₀ = 0.01, z₀ = 0.03
+Metoda: RK4
+Time Step (dt): 0.03
+Steps: 10000
+Burn-in: 500
+Skala: 0.7
 </pre>
 
-#### Szczegóły modelu:
-<!-- a) Context / Kontekst -->
-<p><i><TODO: brief historical context & application (2–3 sentences). Mention original author & year.></i></p>
+<p>
+<b>Atraktor Thomasa</b> jest przykładem trójwymiarowego układu nieliniowego,
+w którym chaotyczna dynamika wynika ze struktury sprzężeń zwrotnych między
+zmiennymi. Został opisany przez René Thomasa w pracy poświęconej analizie
+chaosu w układach z pętlami sprzężenia oraz konstrukcji prostych modeli
+wykazujących złożone zachowanie dynamiczne.
+Autor przedstawia ogólny układ (1999, s. 1896, równ. 2):
+</p>
 
-<!-- b) (Optional) inline display of original equations can be added below if needed -->
-<!--
-<p class="mathline">\(\dot{x} = \dots\)</p>
-<p class="mathline">\(\dot{y} = \dots\)</p>
-<p class="mathline">\(\dot{z} = \dots\)</p>
--->
+<p class="mathline">\( \dot{x} = -b x + f(y), \)</p>
+<p class="mathline">\( \dot{y} = -b y + f(z), \)</p>
+<p class="mathline">\( \dot{z} = -b z + f(x), \)</p>
 
-<!-- c) Parameters & interpretation / Parametry i interpretacja -->
-<p><i><TODO: key parameters and qualitative behavior: periodic → quasi-periodic → chaos, sensitivity, geometry></i></p>
+<p>
+gdzie \(b > 0\) jest współczynnikiem tłumienia, a funkcja \(f\) wprowadza
+nieliniowość odpowiedzialną za powstawanie chaosu. Thomas pokazał, że wiele
+różnych funkcji, tym \(f(u)=\sin u\), prowadzi do powstania trajektorii chaotycznych
+pod warunkiem zachowania cyklicznego sprzężenia między zmiennymi.
+Dla wartości \(b \approx 0.15\) układ ten generuje złożone, nieperiodyczne trajektorie,
+które wielokrotnie oplatają się wokół symetrycznych obszarów w przestrzeni fazowej.
+System ten jest przykładem tzw. „chaosu labiryntowego”, opisywanego przez Thomasa 
+jako efekt wynikający z cyklicznych sprzężeń i nieliniowej odpowiedzi.
+</p>
 
-<!-- d) Source / Źródło -->
-<p><i><TODO: first publication in APA with DOI and link></i></p>
+<p><b>Źródło:</b></p>
+<p class="hanging-indent">
+Thomas, R. (1999). Deterministic chaos seen in terms of feedback circuits:
+analysis, synthesis, “labyrinth chaos”.
+<i>International Journal of Bifurcation and Chaos</i>, 9(10), 1889–1905.
+<a href="https://doi.org/10.1142/S0218127499001383" target="_blank">
+https://doi.org/10.1142/S0218127499001383
+</a>
+

@@ -16,10 +16,12 @@
 	{% include head-custom.html %}
   </head>
 
-  <body>
-    {% include nav.html %}
-    <main class="page-content" aria-label="Content">
-      {{ content }}
-    </main>
-  </body>
+	<body>
+		<div class="layout-inner">
+			{% include nav.html %}
+			<main class="page-content" aria-label="Content">
+			  {{ content }}
+			</main>
+		</div>
+	</body>
 </html>

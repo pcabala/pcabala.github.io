@@ -1,44 +1,39 @@
 ﻿---
-layout: default
+layout: home
 lang: pl
 permalink: /pl/
-title: Start
+title:
 ---
 
-<div class="page-tweaks" markdown="1">
 
-<style>
-/* 
-=====================================
- STYL TYLKO DLA TEJ STRONY (HOME)
--------------------------------------
-Jednostki:
-- rem = odstęp w stosunku do bazowego rozmiaru czcionki (1rem ≈ 16px)
-- em  = odstęp w stosunku do wielkości tekstu w danym miejscu
-
-Jak używać:
-- Większa wartość = większy odstęp.
-- Mniejsza wartość = ciaśniej.
-- Przykład: 0.4em → 40% wysokości litery; 1em ≈ pełna linia tekstu.
-=====================================
-*/
-
-/* Odstęp od górnej krawędzi strony – im większa wartość, tym treść niżej */
-.page-tweaks { margin-top: 2rem; }
-
-/* Odstępy między akapitami – zwiększaj co 0.1em, np. 0.4 → 0.5 lub 0.6 */
-.page-tweaks p { margin: 0.4em 0; }
-
-/* Odstępy wokół nagłówków: góra, boki, dół */
-.page-tweaks h2, .page-tweaks h3 { margin: 1.2em 0 0.6em; }
-
-/* Dla telefonów (ekrany do 480px) – mniejszy odstęp od góry */
-@media (max-width: 480px) {
-  .page-tweaks { margin-top: 2.6rem; }
-}
-</style>
-
-
+<div style="
+    background: #f7f7f7;
+    border: 1px solid #e0e0e0;
+    border-radius: 21px;
+    padding: 1.2rem 1.4rem;
+    margin: 1rem auto;
+">
+  <p style="font-style: italic; margin: 0;">
+    Niniejsza strona została stworzona z myślą o osobach, które chcą lepiej poznać 
+    i zrozumieć zachowanie nieliniowych układów dynamicznych. Jest przeznaczona 
+    zarówno dla osób prowadzących badania i eksperymenty, jak i dla grafików 
+    oraz twórców wykorzystujących atraktory w animacji, sztuce generatywnej 
+    lub innych projektach kreatywnych. W zakładce 
+    <a href="/pl/systemy/lorenz/">Systemy</a> przedstawiono dwadzieścia znanych nieliniowych
+    układów równań różniczkowych, które generują charakterystyczne struktury
+    zwane atraktorami dziwnymi. Każdy opis zawiera krótką wizualizację
+    trajektorii oraz odwołania do źródeł pierwotnych, w których dany układ 
+    został po raz pierwszy opisany. Sekcja <a href="/pl/metody/">Metody</a> 
+    prezentuje algorytmy numeryczne wykorzystywane do integracji 
+    układów. Z kolei zakładka 
+    <a href="/pl/addon/">Add-on</a> opisuje dodatek do programu Blender, 
+	który umożliwia generowanie, wizualizację 
+    i animację trajektorii w przestrzeni 3D. Instalacja dodatku pozwala 
+    wykonywać własne eksperymenty, zmieniać parametry równań, testować 
+    własne systemy oraz tworzyć trójwymiarowe formy oparte na dynamice 
+    układów chaotycznych.
+  </p>
+</div>
 
 
 **Czym jest atraktor?**
@@ -49,7 +44,7 @@ Nie jest to jednak stan spoczynku, a raczej forma dynamicznej równowagi: ruch j
 do pewnego obszaru, ale jego ścieżka nigdy się nie powtarza. To połączenie regularności 
 i nieprzewidywalności nadaje atraktorom ich unikalny charakter.
 
-**Od prostych Równań do złożonych zachowań.**
+**Od prostych równań do złożonych zachowań.**
 Każdy system dynamiczny jest opisany przez matematyczne reguły, najczęściej w postaci układów 
 równań różniczkowych. Równania te, choć często proste w formie, potrafią generować zachowania 
 o zdumiewającej złożoności. Mimo że każdy następny stan systemu jest precyzyjnie zdeterminowany 
@@ -69,12 +64,24 @@ Atraktory mogą mieć bardzo różne kształty – od pojedynczych punktów (sta
 dziwnymi atraktorami (strange attractors), są znakiem rozpoznawczym chaosu deterministycznego. 
 Charakteryzuje je ekstremalna wrażliwość na warunki początkowe: najmniejsza zmiana na starcie prowadzi 
 do zupełnie innej trajektorii w przyszłości, co znane jest jako "efekt motyla". Szczegółowe opisy matematyczne
- i przykłady znajdą Państwo w zakładce Systemy.
+ i przykłady pokazano w zakładce Systemy.
 
-**Ukryty porządek w chaosie**
+**Ukryty porządek w chaosie.**
 Analiza atraktorów pozwala zrozumieć, że chaos nie jest synonimem losowości, ale przejawem ukrytego porządku. 
-Wzory, które wydają się przypadkowe, są w istocie wynikiem działania deterministycznych praw, których złożoność 
-uniemożliwia dokładne długoterminowe przewidywania. To właśnie w tej granicy między tym, co przewidywalne, 
-a tym, co nieprzewidywalne, kryje się całe piękno i intelektualna głębia nauki o systemach dynamicznych.
+Kształty, które wydają się przypadkowe, są w istocie wynikiem działania deterministycznych praw, których złożoność 
+uniemożliwia dokładne długoterminowe przewidywania. To właśnie na granicy między tym, co przewidywalne, 
+a tym, co nieprzewidywalne, kryje się piękno i głębia nauki o systemach dynamicznych.
 
-</div>
+<p>
+<b>Literatrura.</b> Studiowanie teorii chaosu i atraktorów warto rozpocząć od lektury 
+następujących książek:
+</p>
+
+<p class="hanging-indent">
+Devaney, R. (2003). <i>An Introduction to Chaotic Dynamical Systems</i>. Westview Press.<br>
+Gleick, J. (1987). <i>Chaos: Making a New Science</i>. Penguin Books.<br>
+Ott, E. (1993). <i>Chaos in Dynamical Systems</i>. Cambridge University Press.<br>
+Sprott, J. C. (2003). <i>Chaos and Time-Series Analysis</i>. Oxford University Press.<br>
+Sprott, J. C. (2010). <i>Elegant Chaos</i>. World Scientific.<br>
+Strogatz, S. H. (2015). <i>Nonlinear Dynamics and Chaos</i>. CRC Press.
+</p>

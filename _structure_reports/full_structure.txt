@@ -1,0 +1,230 @@
+﻿
+
+============================================================
+=== FOLDER: D:\Sites\pcabala.github.io\_data
+============================================================
+
+Folder PATH listing for volume Dysk
+Volume serial number is 3622-861B
+D:\SITES\PCABALA.GITHUB.IO\_DATA
+    i18n.yml
+    
+No subfolders exist 
+
+
+============================================================
+=== FOLDER: D:\Sites\pcabala.github.io\_includes
+============================================================
+
+Folder PATH listing for volume Dysk
+Volume serial number is 3622-861B
+D:\SITES\PCABALA.GITHUB.IO\_INCLUDES
+    default.html
+    head-custom.html
+    lang_switch.html
+    mathjax.html
+    nav.html
+    systems_subnav_en.html
+    systems_subnav_pl.html
+    
+No subfolders exist 
+
+
+============================================================
+=== FOLDER: D:\Sites\pcabala.github.io\_layouts
+============================================================
+
+Folder PATH listing for volume Dysk
+Volume serial number is 3622-861B
+D:\SITES\PCABALA.GITHUB.IO\_LAYOUTS
+    default.html
+    systems.html
+    
+No subfolders exist 
+
+
+============================================================
+=== FOLDER: D:\Sites\pcabala.github.io\assets
+============================================================
+
+Folder PATH listing for volume Dysk
+Volume serial number is 3622-861B
+D:\SITES\PCABALA.GITHUB.IO\ASSETS
++---css
+|       custom.css
+|       
+\---media
+    \---attractors
+            arneodo.webm
+            burke-shaw.webm
+            chen.webm
+            chua.webm
+            dadras.webm
+            halvorsen.webm
+            hindmarsh-rose.webm
+            langford.webm
+            li.webm
+            lorenz.webm
+            lotka-volterra.webm
+            lu.webm
+            newton-leipnik.webm
+            nose-hoover.webm
+            rabinovich-fabrikant.webm
+            rikitake.webm
+            rossler.webm
+            shimizu-morioka.webm
+            sprott.webm
+            thomas.webm
+            
+
+============================================================
+=== FOLDER: D:\Sites\pcabala.github.io\en
+============================================================
+
+Folder PATH listing for volume Dysk
+Volume serial number is 3622-861B
+D:\SITES\PCABALA.GITHUB.IO\EN
+|   about.md
+|   addon.md
+|   gallery.md
+|   index.md
+|   integration.md
+|   systems.md
+|   
+\---systems
+    +---arneodo
+    |       index.md
+    |       
+    +---burke-shaw
+    |       index.md
+    |       
+    +---chen
+    |       index.md
+    |       
+    +---chua
+    |       index.md
+    |       
+    +---dadras
+    |       index.md
+    |       
+    +---halvorsen
+    |       index.md
+    |       
+    +---hindmarsh-rose
+    |       index.md
+    |       
+    +---langford
+    |       index.md
+    |       
+    +---li
+    |       index.md
+    |       
+    +---lorenz
+    |       index.md
+    |       
+    +---lotka-volterra
+    |       index.md
+    |       
+    +---lu
+    |       index.md
+    |       
+    +---newton-leipnik
+    |       index.md
+    |       
+    +---nose-hoover
+    |       index.md
+    |       
+    +---rabinovich-fabrikant
+    |       index.md
+    |       
+    +---rikitake
+    |       index.md
+    |       
+    +---rossler
+    |       index.md
+    |       
+    +---shimizu-morioka
+    |       index.md
+    |       
+    +---sprott
+    |       index.md
+    |       
+    \---thomas
+            index.md
+            
+
+============================================================
+=== FOLDER: D:\Sites\pcabala.github.io\pl
+============================================================
+
+Folder PATH listing for volume Dysk
+Volume serial number is 3622-861B
+D:\SITES\PCABALA.GITHUB.IO\PL
+|   addon.md
+|   galeria.md
+|   index.md
+|   integracja.md
+|   o-projekcie.md
+|   systemy.md
+|   
+\---systemy
+    +---arneodo
+    |       index.md
+    |       
+    +---burke-shaw
+    |       index.md
+    |       
+    +---chen
+    |       index.md
+    |       
+    +---chua
+    |       index.md
+    |       
+    +---dadras
+    |       index.md
+    |       
+    +---halvorsen
+    |       index.md
+    |       
+    +---hindmarsh-rose
+    |       index.md
+    |       
+    +---langford
+    |       index.md
+    |       
+    +---li
+    |       index.md
+    |       
+    +---lorenz
+    |       index.md
+    |       
+    +---lotka-volterra
+    |       index.md
+    |       
+    +---lu
+    |       index.md
+    |       
+    +---newton-leipnik
+    |       index.md
+    |       
+    +---nose-hoover
+    |       index.md
+    |       
+    +---rabinovich-fabrikant
+    |       index.md
+    |       
+    +---rikitake
+    |       index.md
+    |       
+    +---rossler
+    |       index.md
+    |       
+    +---shimizu-morioka
+    |       index.md
+    |       
+    +---sprott
+    |       index.md
+    |       
+    \---thomas
+            index.md
+            

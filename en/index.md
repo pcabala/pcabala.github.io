@@ -1,43 +1,35 @@
 ﻿---
-layout: default
+layout: home
 lang: en
 permalink: /en/
-title: Home
+title:
 ---
 
-<div class="page-tweaks" markdown="1">
-
-<style>
-/* 
-=====================================
- STYL TYLKO DLA TEJ STRONY (HOME)
--------------------------------------
-Jednostki:
-- rem = odstęp w stosunku do bazowego rozmiaru czcionki (1rem ≈ 16px)
-- em  = odstęp w stosunku do wielkości tekstu w danym miejscu
-
-Jak używać:
-- Większa wartość = większy odstęp.
-- Mniejsza wartość = ciaśniej.
-- Przykład: 0.4em → 40% wysokości litery; 1em ≈ pełna linia tekstu.
-=====================================
-*/
-
-/* Odstęp od górnej krawędzi strony – im większa wartość, tym treść niżej */
-.page-tweaks { margin-top: 2rem; }
-
-/* Odstępy między akapitami – zwiększaj co 0.1em, np. 0.4 → 0.5 lub 0.6 */
-.page-tweaks p { margin: 0.4em 0; }
-
-/* Odstępy wokół nagłówków: góra, boki, dół */
-.page-tweaks h2, .page-tweaks h3 { margin: 1.2em 0 0.6em; }
-
-/* Dla telefonów (ekrany do 480px) – mniejszy odstęp od góry */
-@media (max-width: 480px) {
-  .page-tweaks { margin-top: 2.6rem; }
-}
-</style>
-
+<div style="
+    background: #f7f7f7;
+    border: 1px solid #e0e0e0;
+    border-radius: 21px;
+    padding: 1.2rem 1.4rem;
+    margin: 1rem auto;
+">
+  <p style="font-style: italic; margin: 0;">
+    This website was created for those who wish to better understand the behavior 
+    of nonlinear dynamical systems. It is intended both for researchers and 
+    enthusiasts conducting experiments, as well as for artists and creators who 
+    use attractors in animation, generative art, or other creative projects. 
+    The <a href="/en/systems/lorenz/">Systems</a> section presents twenty well-known 
+    nonlinear differential systems that generate characteristic structures 
+    known as strange attractors. Each system includes a brief visualization 
+    of its trajectories along with references to the original scientific sources. 
+    The <a href="/en/methods/">Methods</a> section provides short explanations 
+    of numerical integration algorithms. The <a href="/en/addon/">Add-on</a> 
+	section describes a Blender plug-in 
+    that enables generating, visualizing, and animating 
+    trajectories in 3D space. Installing the add-on makes it possible to run 
+    your own experiments, modify system parameters, test custom equations, 
+    and create three-dimensional forms based on the dynamics of chaotic systems.
+  </p>
+</div>
 
 
 **What is an attractor?**
@@ -77,8 +69,19 @@ Detailed mathematical descriptions and examples can be found in the Systems sect
 The study of attractors reveals that chaos is not synonymous with randomness but rather 
 an expression of hidden order. Patterns that seem accidental are, in fact, the result 
 of deterministic laws whose complexity prevents exact long-term prediction. 
-It is at this boundary — between what is predictable and what is not — that the true beauty 
-and intellectual depth of dynamical systems emerge.
+It is at this boundary — between what is predictable and what is not — that the beauty 
+and depth of dynamical systems emerge.
 
+<p>
+<b>Literature.</b> A good starting point for studying chaos theory
+and strange attractors is the following selection of books:
+</p>
 
-</div>
+<p class="hanging-indent">
+Devaney, R. (2003). <i>An Introduction to Chaotic Dynamical Systems</i>. Westview Press.<br>
+Gleick, J. (1987). <i>Chaos: Making a New Science</i>. Penguin Books.<br>
+Ott, E. (1993). <i>Chaos in Dynamical Systems</i>. Cambridge University Press.<br>
+Sprott, J. C. (2003). <i>Chaos and Time-Series Analysis</i>. Oxford University Press.<br>
+Sprott, J. C. (2010). <i>Elegant Chaos</i>. World Scientific.<br>
+Strogatz, S. H. (2015). <i>Nonlinear Dynamics and Chaos</i>. CRC Press.
+</p>

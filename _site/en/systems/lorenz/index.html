@@ -27,14 +27,9 @@
      Systems
   </a> |
 
-  <a href="/en/gallery/"
+  <a href="/en/methods/"
      class="">
-     Gallery
-  </a> |
-
-  <a href="/en/integration/"
-     class="">
-     Integration
+     Methods
   </a> |
 
   <a href="/en/addon/"
@@ -42,16 +37,21 @@
      Add-on
   </a> |
 
-  <a href="/en/about/"
+  <a href="/en/gallery/"
      class="">
-     About
+     Gallery
+  </a> |
+
+  <a href="/en/info/"
+     class="">
+     Info
   </a>
 
   <span style="margin-left:auto; float:right;">
     
       <span style="font-weight:bold;">EN</span> |
       
-      <a href="/pl/">PL</a>
+      <a href="/pl/systemy/lorenz/">PL</a>
     
   </span>
 </nav>
@@ -68,11 +68,12 @@
   <a href="/en/systems/arneodo/"                >Arneodo</a>
   <a href="/en/systems/burke-shaw/"             >Burke–Shaw</a>
   <a href="/en/systems/chen/"                   >Chen</a>
+  <a href="/en/systems/chua/"                   >Chua</a>
   <a href="/en/systems/dadras/"                 >Dadras</a>
-  <a href="/en/systems/dequan-li/"              >Dequan–Li</a>
-  <a href="/en/systems/hadley/"                 >Hadley</a>
   <a href="/en/systems/halvorsen/"              >Halvorsen</a>
+  <a href="/en/systems/hindmarsh-rose/"         >Hindmarsh-Rose</a>
   <a href="/en/systems/langford/"               >Langford</a>
+  <a href="/en/systems/li/"                     >Li</a>
   <a href="/en/systems/lorenz/"                 class="active">Lorenz</a>
   <a href="/en/systems/lotka-volterra/"         >Lotka–Volterra</a>
   <a href="/en/systems/lu/"                     >Lü</a>
@@ -82,13 +83,7 @@
   <a href="/en/systems/rikitake/"               >Rikitake</a>
   <a href="/en/systems/rossler/"                >Rössler</a>
   <a href="/en/systems/shimizu-morioka/"        >Shimizu–Morioka</a>
-  <a href="/en/systems/sprott-b/"               >Sprott B</a>
-  <a href="/en/systems/sprott-d/"               >Sprott D</a>
-  <a href="/en/systems/sprott-e/"               >Sprott E</a>
-  <a href="/en/systems/sprott-linz-f/"          >Sprott–Linz F</a>
-  <a href="/en/systems/sprott-linz-k/"          >Sprott–Linz K</a>
-  <a href="/en/systems/sprott-n/"               >Sprott N</a>
-  <a href="/en/systems/sprott-r/"               >Sprott R</a>
+  <a href="/en/systems/sprott/"                 >Sprott</a>
   <a href="/en/systems/thomas/"                 >Thomas</a>
 </nav>
 
@@ -131,18 +126,18 @@
     <pre class="eq-plain">
 Attractor Builder (Blender add-on)
 <b>Equations:</b>
-dx/dt = a * (y - x)
-dy/dt = x * (b - z) - y
-dz/dt = x * y - c * z
+ẋ = a * (y - x)
+ẏ = x * (b - z) - y
+ż = x * y - c * z
 <b>Parameters</b>:
 | a = 10 | b = 28 | c = 8/3 |
 <b>Simulation settings:</b>
-Initial state: x₀ = 0.1, y₀ = 0.0, z₀ = 0.0
+Initial state: x₀ = 0.01, y₀ = 0.01, z₀ = 0.01
 Method: RK4
 Time Step (dt): 0.01
 Steps: 15000
-Burn-in: 300
-Scale: 0.08
+Burn-in: 500
+Scale: 0.1
 </pre>
 
 <!-- a) Context and historical background -->
@@ -180,12 +175,13 @@ Even infinitesimal differences in the initial conditions grow exponentially,
 illustrating the essence of deterministic chaos.
 </p>
 
-<!-- d) Source -->
-<p>
-<b>Source:</b> Lorenz, E. N. (1963).
+<!-- d) Sources -->
+<p><b>Source:</b></p>
+
+<p class="hanging-indent">
+Lorenz, E. N. (1963).
 <i>Deterministic Nonperiodic Flow.</i>
 Journal of the Atmospheric Sciences, 20(2), 130–141.
-<br />
 DOI: 
 <a href="https://doi.org/10.1175/1520-0469(1963)020&lt;0130:DNF&gt;2.0.CO;2" target="_blank">
 10.1175/1520-0469(1963)020&lt;0130:DNF&gt;2.0.CO;2
@@ -299,6 +295,16 @@ DOI:
 }
 .sys-sources p,
 .sys-sources li { margin: 0.4em 0; }
+/* Hanging indent for multi-line references */
+.sys-sources .hanging-indent{
+  display:block;
+  max-width:min(72ch, 100%); /* zawijaj tylko treść pozycji */
+  margin-left:0;
+  padding-left:3ch;
+  text-indent:-3ch;
+}
+
+
 
 /* -----------------------------------------
    Mobile tweaks (simple and predictable)

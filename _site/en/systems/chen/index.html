@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>pcabala.github.io</title>
+    <title>Chen Attractor</title>
     
     <script id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
@@ -27,14 +27,9 @@
      Systems
   </a> |
 
-  <a href="/en/gallery/"
+  <a href="/en/methods/"
      class="">
-     Gallery
-  </a> |
-
-  <a href="/en/integration/"
-     class="">
-     Integration
+     Methods
   </a> |
 
   <a href="/en/addon/"
@@ -42,16 +37,21 @@
      Add-on
   </a> |
 
-  <a href="/en/about/"
+  <a href="/en/gallery/"
      class="">
-     About
+     Gallery
+  </a> |
+
+  <a href="/en/info/"
+     class="">
+     Info
   </a>
 
   <span style="margin-left:auto; float:right;">
     
       <span style="font-weight:bold;">EN</span> |
       
-      <a href="/pl/">PL</a>
+      <a href="/pl/systemy/chen/">PL</a>
     
   </span>
 </nav>
@@ -63,77 +63,256 @@
     
 
     <main class="page-content" aria-label="Content">
-      <nav class="systems-subnav">
-  <a href="/en/systems/arneodo/">Arneodo</a>
-  <a href="/en/systems/burke-shaw/">Burke–Shaw</a>
-  <a href="/en/systems/chen/" class="active">Chen</a>
-  <a href="/en/systems/dadras/">Dadras</a>
-  <a href="/en/systems/dequan-li/">Dequan–Li</a>
-  <a href="/en/systems/hadley/">Hadley</a>
-  <a href="/en/systems/halvorsen/">Halvorsen</a>
-  <a href="/en/systems/langford/">Langford</a>
-  <a href="/en/systems/lorenz/">Lorenz</a>
-  <a href="/en/systems/lotka-volterra/">Lotka–Volterra</a>
-  <a href="/en/systems/lu/">Lü</a>
-  <a href="/en/systems/newton-leipnik/">Newton–Leipnik</a>
-  <a href="/en/systems/nose-hoover/">Nosé–Hoover</a>
-  <a href="/en/systems/rabinovich-fabrikant/">Rabinovich–Fabrikant</a>
-  <a href="/en/systems/rikitake/">Rikitake</a>
-  <a href="/en/systems/rossler/">Rössler</a>
-  <a href="/en/systems/shimizu-morioka/">Shimizu–Morioka</a>
-  <a href="/en/systems/sprott-b/">Sprott B</a>
-  <a href="/en/systems/sprott-d/">Sprott D</a>
-  <a href="/en/systems/sprott-e/">Sprott E</a>
-  <a href="/en/systems/sprott-linz-f/">Sprott–Linz F</a>
-  <a href="/en/systems/sprott-linz-k/">Sprott–Linz K</a>
-  <a href="/en/systems/sprott-n/">Sprott N</a>
-  <a href="/en/systems/sprott-r/">Sprott R</a>
-  <a href="/en/systems/thomas/">Thomas</a>
+      
+  <nav class="systems-subnav">
+  <a href="/en/systems/arneodo/"                >Arneodo</a>
+  <a href="/en/systems/burke-shaw/"             >Burke–Shaw</a>
+  <a href="/en/systems/chen/"                   class="active">Chen</a>
+  <a href="/en/systems/chua/"                   >Chua</a>
+  <a href="/en/systems/dadras/"                 >Dadras</a>
+  <a href="/en/systems/halvorsen/"              >Halvorsen</a>
+  <a href="/en/systems/hindmarsh-rose/"         >Hindmarsh-Rose</a>
+  <a href="/en/systems/langford/"               >Langford</a>
+  <a href="/en/systems/li/"                     >Li</a>
+  <a href="/en/systems/lorenz/"                 >Lorenz</a>
+  <a href="/en/systems/lotka-volterra/"         >Lotka–Volterra</a>
+  <a href="/en/systems/lu/"                     >Lü</a>
+  <a href="/en/systems/newton-leipnik/"         >Newton–Leipnik</a>
+  <a href="/en/systems/nose-hoover/"            >Nosé–Hoover</a>
+  <a href="/en/systems/rabinovich-fabrikant/"   >Rabinovich–Fabrikant</a>
+  <a href="/en/systems/rikitake/"               >Rikitake</a>
+  <a href="/en/systems/rossler/"                >Rössler</a>
+  <a href="/en/systems/shimizu-morioka/"        >Shimizu–Morioka</a>
+  <a href="/en/systems/sprott/"                 >Sprott</a>
+  <a href="/en/systems/thomas/"                 >Thomas</a>
 </nav>
 
-<h1 class="attractor-title">Attractor</h1>
 
-<div class="sys-video">
-  <div class="video-frame">
-    <video autoplay="" loop="" muted="" playsinline="" preload="metadata">
-      <source src="/assets/media/attractors/NAZWA.mp4?v=2" type="video/mp4" />
-    </video>
+
+
+<div class="system-page">
+
+  <!-- SECTION 1 — TITLE -->
+  <section class="sys-title">
+    <h1>Chen Attractor</h1>
+  </section>
+
+  <!-- SECTION 2 — VIDEO (optional) -->
+
+<section class="sys-video sys-video--alpha">
+  <div class="video-frame" style="position:relative">
+	<video id="sys-video"
+	  autoplay
+	  
+	  muted
+	  playsinline
+	  preload="metadata"
+	  width="100%"
+	  style="background:transparent">
+	  <source src="/assets/media/attractors/chen.webm" type="video/webm">
+	  
+	  <source src="/assets/media/attractors/chen.mp4" type="video/mp4">
+	  
+	  Your browser does not support the video tag.
+	</video>
   </div>
+</section>
+
+
+
+  <!-- SECTIONS 3–5 — CONTENT FROM PAGE (wrapped in index.md) -->
+  <main class="sys-content" markdown="1">
+   <section class="sys-info">
+    <pre class="eq-plain">
+Attractor Builder (Blender add-on)
+<b>Equations:</b>
+ẋ = a * (y - x)
+ẏ = (c - a) * x - x * z + c * y
+ż = x * y - b * z
+<b>Parameters</b>:
+| a = 35 | b = 3 | c = 28 |
+<b>Simulation settings:</b>
+Initial state: x₀ = 0, y₀ = 1, z₀ = 1
+Method: RK4
+Time Step (dt): 0.005
+Steps: 20000
+Burn-in: 1000
+Scale: 0.1
+</pre>
+
+<!-- a) Context and historical background -->
+<p>
+The <b>Chen attractor</b> was introduced in 1999 by Guanrong Chen and Tetsushi Ueta
+as a new chaotic system discovered during research on <i>anticontrol of chaos</i> —
+the process of deliberately inducing chaos in an otherwise nonchaotic system.
+Although its equations closely resemble those of the Lorenz system,
+the Chen system is <i>not topologically equivalent</i> to either the Lorenz or the Rössler attractors.
+Its discovery provided an important example showing that small structural differences
+in nonlinear dynamical equations can produce distinct types of chaotic behavior.
+The original system proposed by Chen &amp; Ueta (1999, p. 1465) is given by equations:
+</p>
+
+<!-- b) System of equations -->
+<p class="mathline">\(\dot{x} = a (y - x)\)</p>
+<p class="mathline">\(\dot{y} = (c - a)x - xz + cy\)</p>
+<p class="mathline">\(\dot{z} = xy - bz\)</p>
+
+<!-- c) Parameters and interpretation -->
+<p>
+In this model, the parameter <i>a</i> represents the strength of the coupling
+between the <i>x</i> and <i>y</i> components, <i>b</i> governs the rate of dissipation
+along the <i>z</i> axis, and <i>c</i> influences both the linear amplification
+and the nonlinear feedback through the <i>y</i>- and <i>xz</i>-terms.
+For the classical parameter set (<i>a</i>=35, <i>b</i>=3, <i>c</i>=28),
+the system exhibits a complex double-scroll chaotic attractor
+resembling the Lorenz structure but with different equilibrium topology.
+Despite visual similarity, no linear or nonlinear coordinate transformation
+can convert the Chen system into the Lorenz system — proving
+their dynamical inequivalence.
+</p>
+
+<!-- d) Source -->
+<p>
+<b>Źródło:</b> 
+<br />
+Chen, G. &amp; Ueta, T. (1999).
+<i>Yet Another Chaotic Attractor.</i>
+International Journal of Bifurcation and Chaos, 9 (7), 1465–1466.
+DOI:
+<a href="https://doi.org/10.1142/S0218127499001024" target="_blank">
+10.1142/S0218127499001024
+</a>
+</p>
+
+  </main>
+
 </div>
 
-<pre class="eq-plain">
-<b>Equations used in the Attractor Builder (Blender add-on):</b>
-dx/dt = &lt;TODO: dx here&gt;
-dy/dt = &lt;TODO: dy here&gt;
-dz/dt = &lt;TODO: dz here&gt;
-<b>Parameters</b>:
-| &lt;TODO: parameters, e.g. a = ..., b = ...&gt; |
-<b>Simulation settings:</b>
-Initial state: <TODO>          # PL: Stan początkowy: <TODO>
-Method: <TODO>                 # np. RK4
-Time Step (dt): <TODO>
-Steps: <TODO>
-Burn-in: <TODO>
-Scale: <TODO>
-&lt;/pre&gt;
+<style>
+/* -----------------------------------------
+   Layout container (width & spacing only)
+   ----------------------------------------- */
+.system-page {
+  max-width: 56.25em;            /* ~900px @ 16px base */
+  margin: 0 auto;
+  padding: 0 1.2rem 3rem;
+}
 
-#### Model details:
-<!-- a) Context / Kontekst -->
-<p><i>&lt;TODO: brief historical context &amp; application (2–3 sentences). Mention original author &amp; year.&gt;</i></p>
+/* -----------------------------------------
+   1) TITLE
+   ----------------------------------------- */
+.sys-title h1 {
+  font-family: "Courier New", monospace;                /* base font (try "Garamond", "Lora", "Palatino") */
+  text-align: left;                         /* alignment: left | center | right */
+  font-size: 1.1em;                           /* 1.0 = like body; 1.2 = 20% larger */
+  font-weight: 600;                           /* 400 normal, 600 semi-bold, 700 bold */
+  line-height: 1.3;                           /* 1.2–1.4 typical for titles */
+  margin: 1.5em 0 1.2em;                      /* top, sides, bottom */
+}
 
-<!-- b) (Optional) inline display of original equations can be added below if needed -->
-<!--
-<p class="mathline">\(\dot{x} = \dots\)</p>
-<p class="mathline">\(\dot{y} = \dots\)</p>
-<p class="mathline">\(\dot{z} = \dots\)</p>
--->
+/* -----------------------------------------
+   2) VIDEO (responsive)
+   ----------------------------------------- */
+.sys-video {
+  display: flex;                              /* center the frame */
+  justify-content: left;
+  margin: 1.2em 0 1.6em;
+}
+.sys-video .video-frame {
+  width: 100%;
+  max-width: 37.5em;                          /* ~600px @ 16px base (try 32–44em) */
+  aspect-ratio: 4 / 3;                        /* change to 16 / 9 if you prefer */
+  border-radius: 0.75em;                      /* rounded corners */
+  overflow: hidden;                           /* crop overflow */
+  background: #000;                           /* placeholder before video loads */
+}
+.sys-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;                          /* 'contain' if you want letterboxing */
+}
 
-<!-- c) Parameters & interpretation / Parametry i interpretacja -->
-<p><i>&lt;TODO: key parameters and qualitative behavior: periodic → quasi-periodic → chaos, sensitivity, geometry&gt;</i></p>
+/* -----------------------------------------
+   3) EQUATIONS & PARAMETERS
+   ----------------------------------------- */
+.sys-equations {
+  font-family: "Courier New", monospace;      /* or "Fira Code", monospace */
+  text-align: left;                           /* left | center | justify */
+  font-size: 0.95em;                          /* slightly smaller than body */
+  line-height: 1.5;                           /* 1.4–1.6 typical for code/equations */
+  margin: 1.2em 0 1.5em;                      /* outer spacing */
+  padding: 0.8em 1.0em;                       /* inner padding */
+  border-radius: 0.5em;                       /* soft corners */
+  /* background: rgba(0,0,0,.03); */          /* optional subtle panel */
+}
+/* ensure inner elements follow the block formatting */
+.sys-equations p,
+.sys-equations pre,
+.sys-equations code {
+  font: inherit;                              /* inherit font family & size */
+  text-align: inherit;                        /* inherit alignment */
+  line-height: inherit;                       /* inherit line height */
+}
+.sys-equations p { margin: 0.5em 0; }
 
-<!-- d) Source / Źródło -->
-<p><i>&lt;TODO: first publication in APA with DOI and link&gt;</i></p>
-</TODO></TODO></TODO></TODO></TODO></TODO></TODO></pre>
+.u {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;  /* grubość linii */
+  text-underline-offset: 2px;      /* odstęp linii od tekstu */
+}
+
+/* -----------------------------------------
+   4) INFORMATION
+   ----------------------------------------- */
+.sys-info {
+  font-family: Georgia, serif;
+  text-align: left;
+  line-height: 1.6;
+  margin: 1.2em 0 1.2em;
+}
+
+/* Rozmiar i wcięcia NA SAMYCH akapitach (pewniej niż na kontenerze) */
+.sys-info p {
+  font-size: 1em;   /* ustaw dowolnie: 1.00–1.12em */
+  margin: 0.6em 0;
+  text-indent: 0;      /* wyłącza globalne p+p */
+}
+
+
+/* -----------------------------------------
+   5) SOURCES
+   ----------------------------------------- */
+.sys-sources {
+  font-family: Georgia, serif;                /* or "Times New Roman", serif */
+  text-align: left;
+  font-size: 0.95em;                          /* slightly smaller for compact lists */
+  line-height: 1.4;
+  margin: 1.2em 0 0;                          /* gap before references block */
+}
+.sys-sources p,
+.sys-sources li { margin: 0.4em 0; }
+/* Hanging indent for multi-line references */
+.sys-sources .hanging-indent{
+  display:block;
+  max-width:min(72ch, 100%); /* zawijaj tylko treść pozycji */
+  margin-left:0;
+  padding-left:3ch;
+  text-indent:-3ch;
+}
+
+
+
+/* -----------------------------------------
+   Mobile tweaks (simple and predictable)
+   ----------------------------------------- */
+@media (max-width: 480px){
+  .sys-title h1 { font-size: 1.0em; }         /* smaller title on phones */
+  .sys-equations { font-size: 0.9em; }        /* slightly smaller equations */
+  .sys-video .video-frame { max-width: 100%; }
+}
+</style>
+
+
 
     </main>
   </body>

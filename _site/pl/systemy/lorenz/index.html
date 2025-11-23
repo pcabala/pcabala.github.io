@@ -27,14 +27,9 @@
      Systemy
   </a> |
 
-  <a href="/pl/galeria/"
+  <a href="/pl/metody/"
      class="">
-     Galeria
-  </a> |
-
-  <a href="/pl/integracja/"
-     class="">
-     Integracja
+     Metody
   </a> |
 
   <a href="/pl/addon/"
@@ -42,15 +37,20 @@
      Add-on
   </a> |
 
-  <a href="/pl/o-projekcie/"
+  <a href="/pl/galeria/"
      class="">
-     O projekcie
+     Galeria
+  </a> |
+
+  <a href="/pl/info/"
+     class="">
+     Info
   </a>
 
   <span style="margin-left:auto; float:right;">
     
       
-      <a href="/en/">EN</a> |
+      <a href="/en/systems/lorenz/">EN</a> |
       <span style="font-weight:bold;">PL</span>
     
   </span>
@@ -69,11 +69,12 @@
   <a href="/pl/systemy/arneodo/"                >Arneodo</a>
   <a href="/pl/systemy/burke-shaw/"             >Burke–Shaw</a>
   <a href="/pl/systemy/chen/"                   >Chen</a>
+  <a href="/pl/systemy/chua/"                   >Chua</a>
   <a href="/pl/systemy/dadras/"                 >Dadras</a>
-  <a href="/pl/systemy/dequan-li/"              >Dequan–Li</a>
-  <a href="/pl/systemy/hadley/"                 >Hadley</a>
   <a href="/pl/systemy/halvorsen/"              >Halvorsen</a>
+  <a href="/pl/systemy/hindmarsh-rose/"         >Hindmarsh-Rose</a>
   <a href="/pl/systemy/langford/"               >Langford</a>
+  <a href="/pl/systemy/li/"                     >Li</a>
   <a href="/pl/systemy/lorenz/"                 class="active">Lorenz</a>
   <a href="/pl/systemy/lotka-volterra/"         >Lotka–Volterra</a>
   <a href="/pl/systemy/lu/"                     >Lü</a>
@@ -83,13 +84,7 @@
   <a href="/pl/systemy/rikitake/"               >Rikitake</a>
   <a href="/pl/systemy/rossler/"                >Rössler</a>
   <a href="/pl/systemy/shimizu-morioka/"        >Shimizu–Morioka</a>
-  <a href="/pl/systemy/sprott-b/"               >Sprott B</a>
-  <a href="/pl/systemy/sprott-d/"               >Sprott D</a>
-  <a href="/pl/systemy/sprott-e/"               >Sprott E</a>
-  <a href="/pl/systemy/sprott-linz-f/"          >Sprott–Linz F</a>
-  <a href="/pl/systemy/sprott-linz-k/"          >Sprott–Linz K</a>
-  <a href="/pl/systemy/sprott-n/"               >Sprott N</a>
-  <a href="/pl/systemy/sprott-r/"               >Sprott R</a>
+  <a href="/pl/systemy/sprott/"                 >Sprott</a>
   <a href="/pl/systemy/thomas/"                 >Thomas</a>
 
 </nav>
@@ -133,18 +128,18 @@
     <pre class="eq-plain">
 Attractor Builder (dodatek do Blendera)
 <b>Równania:</b>
-dx/dt = a * (y - x)
-dy/dt = x * (b - z) - y
-dz/dt = x * y - c * z
+ẋ = a * (y - x)
+ẏ = x * (b - z) - y
+ż = x * y - c * z
 <b>Parametry:</b>
 | a = 10 | b = 28 | c = 8/3 |
 <b>Ustawienia symulacji:</b>
-Stan początkowy: x₀ = 0.1, y₀ = 0.0, z₀ = 0.0
+Stan początkowy: x₀ = 0.01, y₀ = 0.01, z₀ = 0.01
 Metoda: RK4
 Krok czasowy (dt): 0.01
 Liczba kroków: 15000
-Faza rozgrzewki (burn-in): 300
-Skala: 0.08
+Faza rozgrzewki (burn-in): 500
+Skala: 0.1
 </pre>
 
 <!-- a) Context and historical background -->
@@ -168,7 +163,7 @@ Oryginalny układ równań przedstawiony przez Lorenza (1963, s. 135) ma postać
 
 <!-- c) Parameters and interpretation -->
 <p>
-W tej formulacji <i>σ</i> oznacza liczbę Prandtla, wyrażającą stosunek
+W tej notacji <i>σ</i> oznacza liczbę Prandtla, wyrażającą stosunek
 między dyfuzyjnością pędu a dyfuzyjnością cieplną, natomiast <i>r</i> jest parametrem sterującym,
 analogicznym do zredukowanej liczby Rayleigha, która określa gradient temperatury
 napędzający konwekcję. Współczynnik <i>b</i> określa geometryczny stosunek wymiarów
@@ -182,12 +177,13 @@ Nawet minimalne różnice w warunkach początkowych prowadzą do wykładniczego 
 co ilustruje istotę deterministycznego chaosu.
 </p>
 
-<!-- d) Source -->
-<p>
-<b>Źródło:</b> Lorenz, E. N. (1963).
+<!-- d) Sources -->
+<p><b>Źródło:</b></p>
+
+<p class="hanging-indent">
+Lorenz, E. N. (1963).
 <i>Deterministic Nonperiodic Flow.</i>
 Journal of the Atmospheric Sciences, 20(2), 130–141.
-<br />
 DOI: 
 <a href="https://doi.org/10.1175/1520-0469(1963)020&lt;0130:DNF&gt;2.0.CO;2" target="_blank">
 10.1175/1520-0469(1963)020&lt;0130:DNF&gt;2.0.CO;2
@@ -301,6 +297,16 @@ DOI:
 }
 .sys-sources p,
 .sys-sources li { margin: 0.4em 0; }
+/* Hanging indent for multi-line references */
+.sys-sources .hanging-indent{
+  display:block;
+  max-width:min(72ch, 100%); /* zawijaj tylko treść pozycji */
+  margin-left:0;
+  padding-left:3ch;
+  text-indent:-3ch;
+}
+
+
 
 /* -----------------------------------------
    Mobile tweaks (simple and predictable)

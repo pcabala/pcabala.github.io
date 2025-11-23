@@ -14,14 +14,9 @@
      {{ t.nav.systems }}
   </a> |
 
-  <a href="{{ t.paths.gallery | relative_url }}"
-     class="{% if current contains '/gallery/' or current contains '/galeria/' %}active{% endif %}">
-     {{ t.nav.gallery }}
-  </a> |
-
-  <a href="{{ t.paths.integration | relative_url }}"
-     class="{% if current contains '/integration/' or current contains '/integracja/' %}active{% endif %}">
-     {{ t.nav.integration }}
+  <a href="{{ t.paths.methods | relative_url }}"
+     class="{% if current contains '/methods/' or current contains '/metody/' %}active{% endif %}">
+     {{ t.nav.methods }}
   </a> |
 
   <a href="{{ t.paths.addon | relative_url }}"
@@ -29,8 +24,13 @@
      {{ t.nav.addon }}
   </a> |
 
+  <a href="{{ t.paths.gallery | relative_url }}"
+     class="{% if current contains '/gallery/' or current contains '/galeria/' %}active{% endif %}">
+     {{ t.nav.gallery }}
+  </a> |
+
   <a href="{{ t.paths.about | relative_url }}"
-     class="{% if current contains '/about/' %}active{% endif %}">
+     class="{% if current contains '/info/' %}active{% endif %}">
      {{ t.nav.about }}
   </a>
 

@@ -27,14 +27,9 @@
      Systemy
   </a> |
 
-  <a href="/pl/galeria/"
+  <a href="/pl/metody/"
      class="">
-     Galeria
-  </a> |
-
-  <a href="/pl/integracja/"
-     class="">
-     Integracja
+     Metody
   </a> |
 
   <a href="/pl/addon/"
@@ -42,15 +37,20 @@
      Add-on
   </a> |
 
-  <a href="/pl/o-projekcie/"
+  <a href="/pl/galeria/"
      class="">
-     O projekcie
+     Galeria
+  </a> |
+
+  <a href="/pl/info/"
+     class="">
+     Info
   </a>
 
   <span style="margin-left:auto; float:right;">
     
       
-      <a href="/en/">EN</a> |
+      <a href="/en/systems/langford/">EN</a> |
       <span style="font-weight:bold;">PL</span>
     
   </span>
@@ -69,11 +69,12 @@
   <a href="/pl/systemy/arneodo/"                >Arneodo</a>
   <a href="/pl/systemy/burke-shaw/"             >Burke–Shaw</a>
   <a href="/pl/systemy/chen/"                   >Chen</a>
+  <a href="/pl/systemy/chua/"                   >Chua</a>
   <a href="/pl/systemy/dadras/"                 >Dadras</a>
-  <a href="/pl/systemy/dequan-li/"              >Dequan–Li</a>
-  <a href="/pl/systemy/hadley/"                 >Hadley</a>
   <a href="/pl/systemy/halvorsen/"              >Halvorsen</a>
+  <a href="/pl/systemy/hindmarsh-rose/"         >Hindmarsh-Rose</a>
   <a href="/pl/systemy/langford/"               class="active">Langford</a>
+  <a href="/pl/systemy/li/"                     >Li</a>
   <a href="/pl/systemy/lorenz/"                 >Lorenz</a>
   <a href="/pl/systemy/lotka-volterra/"         >Lotka–Volterra</a>
   <a href="/pl/systemy/lu/"                     >Lü</a>
@@ -83,13 +84,7 @@
   <a href="/pl/systemy/rikitake/"               >Rikitake</a>
   <a href="/pl/systemy/rossler/"                >Rössler</a>
   <a href="/pl/systemy/shimizu-morioka/"        >Shimizu–Morioka</a>
-  <a href="/pl/systemy/sprott-b/"               >Sprott B</a>
-  <a href="/pl/systemy/sprott-d/"               >Sprott D</a>
-  <a href="/pl/systemy/sprott-e/"               >Sprott E</a>
-  <a href="/pl/systemy/sprott-linz-f/"          >Sprott–Linz F</a>
-  <a href="/pl/systemy/sprott-linz-k/"          >Sprott–Linz K</a>
-  <a href="/pl/systemy/sprott-n/"               >Sprott N</a>
-  <a href="/pl/systemy/sprott-r/"               >Sprott R</a>
+  <a href="/pl/systemy/sprott/"                 >Sprott</a>
   <a href="/pl/systemy/thomas/"                 >Thomas</a>
 
 </nav>
@@ -133,9 +128,9 @@
     <pre class="eq-plain">
 Attractor Builder (Blender add-on)
 <b>Równania:</b>
-dx/dt = (z - b) * x - d * y
-dy/dt = d * x + (z - b) * y
-dz/dt = c + a * z - (z**3)/3 - (x**2 + y**2) * (1 + e * z)
+ẋ = (z - b) * x - d * y
+ẏ = d * x + (z - b) * y
+ż = c + a * z - (z**3)/3 - (x**2 + y**2) * (1 + e * z)
 <b>Parametry:</b>
 | a = 0.95 | b = 0.7 | c = 0.6 | d = 3.5 | e = 0.25 |
 <b>Ustawienia symulacji:</b>
@@ -303,6 +298,16 @@ DOI:
 }
 .sys-sources p,
 .sys-sources li { margin: 0.4em 0; }
+/* Hanging indent for multi-line references */
+.sys-sources .hanging-indent{
+  display:block;
+  max-width:min(72ch, 100%); /* zawijaj tylko treść pozycji */
+  margin-left:0;
+  padding-left:3ch;
+  text-indent:-3ch;
+}
+
+
 
 /* -----------------------------------------
    Mobile tweaks (simple and predictable)

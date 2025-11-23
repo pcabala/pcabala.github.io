@@ -6,23 +6,24 @@ video_mp4: "/assets/media/attractors/lorenz.mp4"
 alpha: true
 stop_at: 11
 lang: en
+alt_url: /pl/systemy/lorenz/
 ---
 
 <pre class="eq-plain">
 Attractor Builder (Blender add-on)
 <b>Equations:</b>
-dx/dt = a * (y - x)
-dy/dt = x * (b - z) - y
-dz/dt = x * y - c * z
+ẋ = a * (y - x)
+ẏ = x * (b - z) - y
+ż = x * y - c * z
 <b>Parameters</b>:
 | a = 10 | b = 28 | c = 8/3 |
 <b>Simulation settings:</b>
-Initial state: x₀ = 0.1, y₀ = 0.0, z₀ = 0.0
+Initial state: x₀ = 0.01, y₀ = 0.01, z₀ = 0.01
 Method: RK4
 Time Step (dt): 0.01
 Steps: 15000
-Burn-in: 300
-Scale: 0.08
+Burn-in: 500
+Scale: 0.1
 </pre>
 
 <!-- a) Context and historical background -->
@@ -60,12 +61,13 @@ Even infinitesimal differences in the initial conditions grow exponentially,
 illustrating the essence of deterministic chaos.
 </p>
 
-<!-- d) Source -->
-<p>
-<b>Source:</b> Lorenz, E. N. (1963).
+<!-- d) Sources -->
+<p><b>Source:</b></p>
+
+<p class="hanging-indent">
+Lorenz, E. N. (1963).
 <i>Deterministic Nonperiodic Flow.</i>
 Journal of the Atmospheric Sciences, 20(2), 130–141.
-<br>
 DOI: 
 <a href="https://doi.org/10.1175/1520-0469(1963)020&lt;0130:DNF&gt;2.0.CO;2" target="_blank">
 10.1175/1520-0469(1963)020&lt;0130:DNF&gt;2.0.CO;2

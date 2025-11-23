@@ -6,23 +6,24 @@ video_mp4: "/assets/media/attractors/lorenz.mp4"
 alpha: true
 stop_at: 11
 lang: pl
+alt_url: /en/systems/lorenz/
 ---
 
 <pre class="eq-plain">
 Attractor Builder (dodatek do Blendera)
 <b>Równania:</b>
-dx/dt = a * (y - x)
-dy/dt = x * (b - z) - y
-dz/dt = x * y - c * z
+ẋ = a * (y - x)
+ẏ = x * (b - z) - y
+ż = x * y - c * z
 <b>Parametry:</b>
 | a = 10 | b = 28 | c = 8/3 |
 <b>Ustawienia symulacji:</b>
-Stan początkowy: x₀ = 0.1, y₀ = 0.0, z₀ = 0.0
+Stan początkowy: x₀ = 0.01, y₀ = 0.01, z₀ = 0.01
 Metoda: RK4
 Krok czasowy (dt): 0.01
 Liczba kroków: 15000
-Faza rozgrzewki (burn-in): 300
-Skala: 0.08
+Faza rozgrzewki (burn-in): 500
+Skala: 0.1
 </pre>
 
 <!-- a) Context and historical background -->
@@ -46,7 +47,7 @@ Oryginalny układ równań przedstawiony przez Lorenza (1963, s. 135) ma postać
 
 <!-- c) Parameters and interpretation -->
 <p>
-W tej formulacji <i>σ</i> oznacza liczbę Prandtla, wyrażającą stosunek
+W tej notacji <i>σ</i> oznacza liczbę Prandtla, wyrażającą stosunek
 między dyfuzyjnością pędu a dyfuzyjnością cieplną, natomiast <i>r</i> jest parametrem sterującym,
 analogicznym do zredukowanej liczby Rayleigha, która określa gradient temperatury
 napędzający konwekcję. Współczynnik <i>b</i> określa geometryczny stosunek wymiarów
@@ -60,12 +61,13 @@ Nawet minimalne różnice w warunkach początkowych prowadzą do wykładniczego 
 co ilustruje istotę deterministycznego chaosu.
 </p>
 
-<!-- d) Source -->
-<p>
-<b>Źródło:</b> Lorenz, E. N. (1963).
+<!-- d) Sources -->
+<p><b>Źródło:</b></p>
+
+<p class="hanging-indent">
+Lorenz, E. N. (1963).
 <i>Deterministic Nonperiodic Flow.</i>
 Journal of the Atmospheric Sciences, 20(2), 130–141.
-<br>
 DOI: 
 <a href="https://doi.org/10.1175/1520-0469(1963)020&lt;0130:DNF&gt;2.0.CO;2" target="_blank">
 10.1175/1520-0469(1963)020&lt;0130:DNF&gt;2.0.CO;2
