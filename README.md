@@ -1,3 +1,1 @@
-🚀 Current Project:
-Attractor Builder
-A Python add-on for generating chaotic attractors.
+Kod źródłowy dla strony: https://pcabala.github.io
