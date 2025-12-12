@@ -1,0 +1,21 @@
+﻿# Python / Blender
+__pycache__/
+*.pyc
+*.pyo
+*.blend1
+*.blend@
+
+# Jekyll (strona docs/)
+_site/
+.jekyll-cache/
+.sass-cache/
+.jekyll-metadata
+
+# System / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/ 
+
+# Lokalne skrypty (nie wysyłać na GitHub)
+StartSite.bat
